@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -21,7 +21,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RX6-DR-ueB">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="30"/>
-                                        <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Login">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -31,7 +31,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cam-gU-QLx">
                                         <rect key="frame" x="0.0" y="65" width="100" height="30"/>
-                                        <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Sign up">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -72,7 +72,7 @@
                                 </state>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xyx-ZL-UAB" secondAttribute="trailing" constant="60" id="0yn-3U-WcR"/>
                             <constraint firstItem="xyx-ZL-UAB" firstAttribute="top" secondItem="qPl-vM-rjS" secondAttribute="bottom" constant="60" id="4D5-jq-i7e"/>
@@ -90,7 +90,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+            <point key="canvasLocation" x="17" y="39"/>
         </scene>
         <!--Profile-->
         <scene sceneID="PVj-Ws-CoP">
@@ -237,13 +237,13 @@
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ac-8q-S7E">
                                                                     <rect key="frame" x="0.0" y="0.0" width="179" height="20.5"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                                                    <color key="textColor" systemColor="systemPurpleColor" red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <color key="textColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trainer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uzb-e7-25N">
                                                                     <rect key="frame" x="179" y="0.0" width="179" height="20.5"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                                                    <color key="textColor" systemColor="systemPurpleColor" red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <color key="textColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
@@ -362,7 +362,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="spB-3a-yO9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2578.2608695652175" y="2759.5982142857142"/>
+            <point key="canvasLocation" x="-2399" y="1625"/>
         </scene>
         <!--Users-->
         <scene sceneID="S9G-J4-u7y">
@@ -434,7 +434,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ERg-62-Njw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1404.3478260869567" y="2657.8125"/>
+            <point key="canvasLocation" x="-1329" y="1578"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="pqW-OK-J7V">
@@ -457,12 +457,12 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kcb-m9-qWi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1404" y="1212"/>
+            <point key="canvasLocation" x="-1223" y="53"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign Up View Controller-->
         <scene sceneID="E6G-q2-lGf">
             <objects>
-                <viewController id="EiB-ew-RV0" sceneMemberID="viewController">
+                <viewController id="EiB-ew-RV0" customClass="SignUpViewController" customModule="Sportive" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OBj-xK-8Yo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -500,13 +500,16 @@
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TcZ-nA-uQo">
                                 <rect key="frame" x="294" y="491" width="100" height="30"/>
-                                <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="f7D-Gr-PA7"/>
                                 </constraints>
                                 <state key="normal" title="Sign up">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="signUpButtonPressed:" destination="EiB-ew-RV0" eventType="touchUpInside" id="M1C-vd-MAz"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tst-uC-agg">
                                 <rect key="frame" x="20" y="491.5" width="246" height="27"/>
@@ -514,6 +517,9 @@
                                 <state key="normal" title="Already have an account ? Login">
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="logInButtonPressed:" destination="EiB-ew-RV0" eventType="touchUpInside" id="nJo-mM-52q"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="ozY-Ou-6rU">
                                 <rect key="frame" x="20" y="368.5" width="267.5" height="25"/>
@@ -533,6 +539,9 @@
                                                         <color key="value" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="chickBoxClicked:" destination="EiB-ew-RV0" eventType="valueChanged" id="meI-m1-d16"/>
+                                                </connections>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aG0-NA-ycH">
                                                 <rect key="frame" x="30" y="0.0" width="42.5" height="25"/>
@@ -545,7 +554,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Zfp-Ue-GAE">
                                         <rect key="frame" x="97.5" y="0.0" width="72.5" height="25"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZAW-hB-csU" customClass="BEMCheckBox">
+                                            <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZAW-hB-csU" customClass="BEMCheckBox">
                                                 <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
@@ -557,6 +566,9 @@
                                                         <color key="value" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="chickBoxClicked:" destination="EiB-ew-RV0" eventType="valueChanged" id="dq9-rJ-m6a"/>
+                                                </connections>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8D3-kv-Gmg">
                                                 <rect key="frame" x="30" y="0.0" width="42.5" height="25"/>
@@ -569,7 +581,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="cPE-0u-id5">
                                         <rect key="frame" x="195" y="0.0" width="72.5" height="25"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="odY-gN-7Wh" customClass="BEMCheckBox">
+                                            <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="odY-gN-7Wh" customClass="BEMCheckBox">
                                                 <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
@@ -581,6 +593,9 @@
                                                         <color key="value" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="chickBoxClicked:" destination="EiB-ew-RV0" eventType="valueChanged" id="Qf7-kF-fcY"/>
+                                                </connections>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trainer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zaz-M5-VKK">
                                                 <rect key="frame" x="30" y="0.0" width="42.5" height="25"/>
@@ -598,7 +613,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Tst-uC-agg" firstAttribute="top" secondItem="74Q-Te-PYL" secondAttribute="bottom" constant="133" id="03r-uh-met"/>
                             <constraint firstItem="ozY-Ou-6rU" firstAttribute="top" secondItem="74Q-Te-PYL" secondAttribute="bottom" constant="10" id="4b9-Ef-AO4"/>
@@ -619,10 +634,17 @@
                         <viewLayoutGuide key="safeArea" id="GjT-SX-gRG"/>
                     </view>
                     <navigationItem key="navigationItem" id="22i-qy-ZM5"/>
+                    <connections>
+                        <outlet property="emailTF" destination="iSo-UY-uat" id="Zhq-2x-aar"/>
+                        <outlet property="locationTF" destination="VTb-QQ-65Z" id="fGG-oO-L02"/>
+                        <outlet property="mobileTF" destination="bmr-dx-lsd" id="3o8-cQ-wLk"/>
+                        <outlet property="nameTF" destination="IFG-4G-L26" id="SIq-VU-ucj"/>
+                        <outlet property="passwordTF" destination="3YN-v5-ev1" id="m1O-xi-8GS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vwD-Ad-WgK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="842.02898550724649" y="137.94642857142856"/>
+            <point key="canvasLocation" x="796" y="39"/>
         </scene>
         <!--Activites-->
         <scene sceneID="Pca-oD-k7T">
@@ -672,7 +694,7 @@
                                                         </stackView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r0t-bD-wMG">
                                                             <rect key="frame" x="290" y="59" width="60" height="18"/>
-                                                            <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="60" id="8Jr-Kq-8rD"/>
                                                             </constraints>
@@ -717,7 +739,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gbc-ug-QzV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-246" y="2658"/>
+            <point key="canvasLocation" x="-472" y="1578"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="h1N-in-ApX">
@@ -878,7 +900,7 @@
                                                 </state>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="6W2-n6-72u" firstAttribute="leading" secondItem="nuu-WP-MKu" secondAttribute="leading" constant="20" id="0pn-dz-czN"/>
                                             <constraint firstItem="6W2-n6-72u" firstAttribute="top" secondItem="YwS-0s-CgO" secondAttribute="bottom" constant="20" id="312-Er-jCW"/>
@@ -924,7 +946,7 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="gA8-9A-ept"/>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="qKq-9K-koN" firstAttribute="top" secondItem="Pi3-2G-nft" secondAttribute="top" id="Com-99-gfo"/>
                             <constraint firstItem="qKq-9K-koN" firstAttribute="bottom" secondItem="Pi3-2G-nft" secondAttribute="bottom" id="Fdp-4F-aat"/>
@@ -938,7 +960,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QcC-ZR-Cky" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3910.144927536232" y="2657.8125"/>
+            <point key="canvasLocation" x="-2507" y="2476"/>
         </scene>
         <!--Profile-->
         <scene sceneID="73J-IT-UzH">
@@ -962,7 +984,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kEA-Kq-e5t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2577" y="1957"/>
+            <point key="canvasLocation" x="-2400" y="809"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="qro-4m-QBd">
@@ -982,7 +1004,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PhW-s1-8PN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1404.3478260869567" y="1956.6964285714284"/>
+            <point key="canvasLocation" x="-1446" y="836"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="ugw-IK-YaP">
@@ -1002,7 +1024,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QF9-ub-o6M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-246.37681159420291" y="1956.6964285714284"/>
+            <point key="canvasLocation" x="-588" y="809"/>
         </scene>
         <!--Item 2-->
         <scene sceneID="iJv-oD-Xge">
@@ -1018,7 +1040,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l7J-sf-YPU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3158" y="1957"/>
+            <point key="canvasLocation" x="578" y="1855"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="78f-67-Bla">
@@ -1034,7 +1056,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Wv-K3-8ba" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4119" y="1957"/>
+            <point key="canvasLocation" x="1632" y="1914"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="3BC-fj-0zE">
@@ -1056,7 +1078,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kL8-dF-Gfb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4119" y="1240"/>
+            <point key="canvasLocation" x="1632" y="1207"/>
         </scene>
         <!--Activites-->
         <scene sceneID="6Jj-8G-zaj">
@@ -1106,7 +1128,7 @@
                                                         </stackView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UqW-yU-ZqK">
                                                             <rect key="frame" x="290" y="59" width="60" height="18"/>
-                                                            <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="60" id="OgN-jd-cIQ"/>
                                                             </constraints>
@@ -1152,14 +1174,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9a7-dr-jmI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5093" y="1957"/>
+            <point key="canvasLocation" x="2641" y="1914"/>
         </scene>
     </scenes>
     <resources>
         <image name="back" width="601" height="476"/>
         <image name="center" width="627" height="549"/>
-        <image name="person.crop.circle" catalog="system" width="64" height="62"/>
-        <image name="power" catalog="system" width="62" height="64"/>
+        <image name="person.crop.circle" catalog="system" width="64" height="60"/>
+        <image name="power" catalog="system" width="64" height="62"/>
         <image name="user" width="256" height="256"/>
     </resources>
 </document>

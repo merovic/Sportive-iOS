@@ -23,6 +23,10 @@
 		18F0937F2341F33A000B29CA /* SportiveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F0937E2341F33A000B29CA /* SportiveUITests.swift */; };
 		617423247F0A48871FFD6A5E /* Pods_SportiveTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CC4C1500AF3225748954746 /* Pods_SportiveTests.framework */; };
 		815358622366F1720095A98F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815358612366F1720095A98F /* SignUpViewController.swift */; };
+		81CD3CAE23670DDA00B4E8D5 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CD3CAD23670DDA00B4E8D5 /* UserViewController.swift */; };
+		81CD3CB223670F0C00B4E8D5 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CD3CB123670F0C00B4E8D5 /* UserTableViewCell.swift */; };
+		81CD3CB8236711D200B4E8D5 /* ActivitesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CD3CB7236711D200B4E8D5 /* ActivitesViewController.swift */; };
+		81CD3CBA2367126C00B4E8D5 /* ActivitiesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CD3CB92367126C00B4E8D5 /* ActivitiesTableViewCell.swift */; };
 		A101B432254112F771ABCA12 /* Pods_Sportive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3619FBD4E9D4F8AD1DFA6834 /* Pods_Sportive.framework */; };
 		EE532D0D00C14F4544E6EC45 /* Pods_SportiveUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB5E728723185DDB02A864BD /* Pods_SportiveUITests.framework */; };
 /* End PBXBuildFile section */
@@ -72,6 +76,10 @@
 		5FDF0EA66DFDA3679EF3841D /* Pods-SportiveUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportiveUITests.release.xcconfig"; path = "Target Support Files/Pods-SportiveUITests/Pods-SportiveUITests.release.xcconfig"; sourceTree = "<group>"; };
 		66150556E812A96C8D3169C9 /* Pods-SportiveTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportiveTests.debug.xcconfig"; path = "Target Support Files/Pods-SportiveTests/Pods-SportiveTests.debug.xcconfig"; sourceTree = "<group>"; };
 		815358612366F1720095A98F /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		81CD3CAD23670DDA00B4E8D5 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		81CD3CB123670F0C00B4E8D5 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		81CD3CB7236711D200B4E8D5 /* ActivitesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitesViewController.swift; sourceTree = "<group>"; };
+		81CD3CB92367126C00B4E8D5 /* ActivitiesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesTableViewCell.swift; sourceTree = "<group>"; };
 		87BB4EF4F01AC83A8C9C29CC /* Pods-SportiveTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportiveTests.release.xcconfig"; path = "Target Support Files/Pods-SportiveTests/Pods-SportiveTests.release.xcconfig"; sourceTree = "<group>"; };
 		BB9FCABC1C968266ED2A0D46 /* Pods-SportiveUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportiveUITests.debug.xcconfig"; path = "Target Support Files/Pods-SportiveUITests/Pods-SportiveUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CB5E728723185DDB02A864BD /* Pods_SportiveUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SportiveUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +126,8 @@
 		181B5F312366E499002E7246 /* Scenarios */ = {
 			isa = PBXGroup;
 			children = (
+				81CD3CB32367113E00B4E8D5 /* ActivitiesTab */,
+				81CD3CA923670CEE00B4E8D5 /* UserTab */,
 				181B5F392366E502002E7246 /* Login */,
 			);
 			path = Scenarios;
@@ -230,6 +240,72 @@
 				CB5E728723185DDB02A864BD /* Pods_SportiveUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		81CD3CA923670CEE00B4E8D5 /* UserTab */ = {
+			isa = PBXGroup;
+			children = (
+				81CD3CAB23670D4A00B4E8D5 /* View */,
+				81CD3CAA23670D3800B4E8D5 /* Model */,
+				81CD3CAC23670D5000B4E8D5 /* Controller */,
+			);
+			path = UserTab;
+			sourceTree = "<group>";
+		};
+		81CD3CAA23670D3800B4E8D5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		81CD3CAB23670D4A00B4E8D5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				81CD3CB123670F0C00B4E8D5 /* UserTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		81CD3CAC23670D5000B4E8D5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				81CD3CAD23670DDA00B4E8D5 /* UserViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		81CD3CB32367113E00B4E8D5 /* ActivitiesTab */ = {
+			isa = PBXGroup;
+			children = (
+				81CD3CB62367119400B4E8D5 /* View */,
+				81CD3CB52367119100B4E8D5 /* Controller */,
+				81CD3CB42367117900B4E8D5 /* Model */,
+			);
+			path = ActivitiesTab;
+			sourceTree = "<group>";
+		};
+		81CD3CB42367117900B4E8D5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		81CD3CB52367119100B4E8D5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				81CD3CB7236711D200B4E8D5 /* ActivitesViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		81CD3CB62367119400B4E8D5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				81CD3CB92367126C00B4E8D5 /* ActivitiesTableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		B4EE92A875179B3BA6AA506C /* Pods */ = {
@@ -469,6 +545,8 @@
 				815358622366F1720095A98F /* SignUpViewController.swift in Sources */,
 				181B5F362366E4F7002E7246 /* DesignableUITextField.swift in Sources */,
 				18F093612341F338000B29CA /* ViewController.swift in Sources */,
+				81CD3CAE23670DDA00B4E8D5 /* UserViewController.swift in Sources */,
+				81CD3CB223670F0C00B4E8D5 /* UserTableViewCell.swift in Sources */,
 				18F0935D2341F338000B29CA /* AppDelegate.swift in Sources */,
 				181B5F422366E538002E7246 /* APIClient.swift in Sources */,
 				181B5F372366E4F7002E7246 /* CardView.swift in Sources */,
@@ -476,6 +554,8 @@
 				18F0935F2341F338000B29CA /* SceneDelegate.swift in Sources */,
 				181B5F382366E4F7002E7246 /* Alert.swift in Sources */,
 				181B5F412366E538002E7246 /* Constants.swift in Sources */,
+				81CD3CBA2367126C00B4E8D5 /* ActivitiesTableViewCell.swift in Sources */,
+				81CD3CB8236711D200B4E8D5 /* ActivitesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

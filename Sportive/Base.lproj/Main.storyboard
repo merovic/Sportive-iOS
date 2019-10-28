@@ -311,7 +311,7 @@
                                             <constraint firstItem="4Cq-X6-DlO" firstAttribute="top" secondItem="hMM-1g-sWZ" secondAttribute="top" constant="20" id="LZV-cf-yz9"/>
                                             <constraint firstItem="NlX-cI-iAf" firstAttribute="top" secondItem="faK-is-eFn" secondAttribute="bottom" constant="8" id="UrF-aw-eWd"/>
                                             <constraint firstItem="4Cq-X6-DlO" firstAttribute="leading" secondItem="hMM-1g-sWZ" secondAttribute="leading" constant="20" id="Vdf-Tf-2nk"/>
-                                            <constraint firstItem="6Pm-nw-PaD" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hMM-1g-sWZ" secondAttribute="leading" symbolic="YES" id="Vzk-oU-Mtj"/>
+                                            <constraint firstItem="6Pm-nw-PaD" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hMM-1g-sWZ" secondAttribute="leading" constant="20" symbolic="YES" id="Vzk-oU-Mtj"/>
                                             <constraint firstItem="gJ7-Ue-32u" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hMM-1g-sWZ" secondAttribute="leading" symbolic="YES" id="YSx-gY-40H"/>
                                             <constraint firstAttribute="bottom" secondItem="kGM-CT-mSA" secondAttribute="bottom" constant="8" id="a8o-g6-t8Q"/>
                                             <constraint firstItem="faK-is-eFn" firstAttribute="leading" secondItem="hMM-1g-sWZ" secondAttribute="leading" constant="20" id="hEi-0R-Rfl"/>
@@ -367,7 +367,7 @@
         <!--Users-->
         <scene sceneID="S9G-J4-u7y">
             <objects>
-                <viewController id="OLb-Cj-gBm" sceneMemberID="viewController">
+                <viewController id="OLb-Cj-gBm" customClass="UserViewController" customModule="Sportive" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SMI-Ez-Fgh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -376,7 +376,7 @@
                                 <rect key="frame" x="20" y="76" width="374" height="663"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="101" id="cZQ-JI-r4R">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="101" id="cZQ-JI-r4R" customClass="UserTableViewCell" customModule="Sportive" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="374" height="101"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cZQ-JI-r4R" id="pSy-2T-vXh">
@@ -417,8 +417,16 @@
                                                 <constraint firstItem="0bF-1z-AEi" firstAttribute="leading" secondItem="pSy-2T-vXh" secondAttribute="leading" constant="8" id="KYu-In-SaB"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="ImageView" destination="VaG-X3-tMC" id="EN4-2t-bpW"/>
+                                            <outlet property="emailLbl" destination="xhp-Vg-lfb" id="yjA-Vd-TjZ"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="OLb-Cj-gBm" id="yHc-FL-TQu"/>
+                                    <outlet property="delegate" destination="OLb-Cj-gBm" id="ekQ-R5-l7Z"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -431,6 +439,9 @@
                         <viewLayoutGuide key="safeArea" id="JQ0-Yh-z7w"/>
                     </view>
                     <navigationItem key="navigationItem" title="Users" id="LJm-Wl-7Ay"/>
+                    <connections>
+                        <outlet property="UserTableView" destination="Epr-T6-GhA" id="bPc-6q-9yJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ERg-62-Njw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -649,7 +660,7 @@
         <!--Activites-->
         <scene sceneID="Pca-oD-k7T">
             <objects>
-                <viewController id="gey-Ep-No3" sceneMemberID="viewController">
+                <viewController id="gey-Ep-No3" customClass="ActivitesViewController" customModule="Sportive" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="v6r-bF-cfT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -658,7 +669,7 @@
                                 <rect key="frame" x="20" y="76" width="374" height="663"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="101" id="kbP-Ld-gJK">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="101" id="kbP-Ld-gJK" customClass="ActivitiesTableViewCell" customModule="Sportive" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="374" height="101"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kbP-Ld-gJK" id="0NM-tj-zOA">
@@ -722,8 +733,18 @@
                                                 <constraint firstAttribute="trailing" secondItem="q8s-e6-IJ3" secondAttribute="trailing" constant="8" id="g7V-Yf-G3N"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="ImageView" destination="gph-cd-3Hk" id="g1u-f2-jXo"/>
+                                            <outlet property="emailLbl" destination="5Ue-j9-adH" id="aN9-gg-2JF"/>
+                                            <outlet property="rateButtonPressed" destination="r0t-bD-wMG" id="an7-dK-dLK"/>
+                                            <outlet property="statusLbl" destination="BJL-Xe-Wgr" id="Xqt-Ti-tok"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="gey-Ep-No3" id="yOZ-4Q-EQX"/>
+                                    <outlet property="delegate" destination="gey-Ep-No3" id="5WV-pk-xUF"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -736,6 +757,9 @@
                         <viewLayoutGuide key="safeArea" id="kls-cE-Kbs"/>
                     </view>
                     <navigationItem key="navigationItem" title="Activites" id="oF9-oq-UIM"/>
+                    <connections>
+                        <outlet property="ActivitiesTableView" destination="sjM-pV-3yL" id="j4z-29-uS6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gbc-ug-QzV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

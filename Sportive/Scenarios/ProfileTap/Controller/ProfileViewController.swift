@@ -9,24 +9,78 @@
 import UIKit
 import MapKit
 class ProfileViewController: UIViewController {
+    
+    //MARK - IBOutlet
 
     @IBOutlet weak var mapView: MKMapView!
+    
+    @IBOutlet weak var descriptionTf: UIView!
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    @IBOutlet weak var historyTf: UITextView!
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        tableView.delegate = self
+        tableView.dataSource = self
+        collectionView.delegate = self
+        collectionView.dataSource = self
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
+
+//MARK - Extension
+       
+
+    //MARK - UITableViewDelegate
+
+extension ProfileViewController : UITableViewDelegate {
+    
+}
+     //MARK - UITableViewDataSource
+
+extension ProfileViewController : UITableViewDataSource {
+    //TODO: Declare numberOfRowsInSection here:
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        <#code#>
+    }
+    //TODO: Declare cellForRowAtIndexPath here:
+
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }
+    
+    
+    
+}
+       //MARK - UICollectionViewDelegate
+extension ProfileViewController : UICollectionViewDelegate {
+    
+}
+    //MARK - UICollectionViewDataSource
+extension ProfileViewController : UICollectionViewDataSource {
+    //TODO: Declare numberOfRowsInSection here:
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        <#code#>
+    }
+    //TODO: Declare cellForItemAt here:
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        <#code#>
+    }
+    
+    
+}
+

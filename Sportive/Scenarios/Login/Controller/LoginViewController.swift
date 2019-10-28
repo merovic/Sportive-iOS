@@ -9,6 +9,8 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+    //MARK - IBOutlet
+    
     @IBOutlet weak var yourEmailTf: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     
@@ -19,15 +21,8 @@ class LoginViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
+    //MARK - IBAction
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     @IBAction func logInButtonPressed(_ sender: UIButton) {
     }
     @IBAction func signUpButtonPressed(_ sender: UIButton) {

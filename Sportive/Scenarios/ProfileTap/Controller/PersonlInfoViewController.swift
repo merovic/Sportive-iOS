@@ -9,7 +9,25 @@
 import UIKit
 
 class PersonlInfoViewController: UIViewController {
+    
+    //MARK - IBOutlet
 
+    
+    @IBOutlet weak var profileImg: UIImageView!
+    @IBOutlet weak var nameTf: UITextField!
+    
+    @IBOutlet weak var emailTf: UITextField!
+    
+    @IBOutlet weak var passwordTf: UITextField!
+    
+    
+    @IBOutlet weak var mobileTf: UITextField!
+    
+    @IBOutlet weak var profileLbl1: UILabel!
+    
+    @IBOutlet weak var profileLbl2: UILabel!
+    @IBOutlet var uploadedImages: [UIImageView]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,14 +35,16 @@ class PersonlInfoViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
+   //MARK - IBAction
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func editBtnPressed(_ sender: UIButton) {
     }
-    */
-
+    
+    
+    @IBAction func saveBtnPressed(_ sender: UIButton) {
+    }
+    
+    @IBAction func addGameBtnPressed(_ sender: UIButton) {
+    }
+    
 }

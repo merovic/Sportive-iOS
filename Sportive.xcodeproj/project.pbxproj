@@ -22,6 +22,8 @@
 		18F093742341F33A000B29CA /* SportiveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F093732341F33A000B29CA /* SportiveTests.swift */; };
 		18F0937F2341F33A000B29CA /* SportiveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F0937E2341F33A000B29CA /* SportiveUITests.swift */; };
 		3BCE98002367413D00777B8E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCE97FF2367413D00777B8E /* LoginViewController.swift */; };
+		3BCE98062367460A00777B8E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCE98052367460A00777B8E /* ProfileViewController.swift */; };
+		3BCE98092367464A00777B8E /* PersonlInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCE98082367464A00777B8E /* PersonlInfoViewController.swift */; };
 		617423247F0A48871FFD6A5E /* Pods_SportiveTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CC4C1500AF3225748954746 /* Pods_SportiveTests.framework */; };
 		815358622366F1720095A98F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815358612366F1720095A98F /* SignUpViewController.swift */; };
 		81CD3CAE23670DDA00B4E8D5 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CD3CAD23670DDA00B4E8D5 /* UserViewController.swift */; };
@@ -73,6 +75,8 @@
 		18F093802341F33A000B29CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3619FBD4E9D4F8AD1DFA6834 /* Pods_Sportive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sportive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BCE97FF2367413D00777B8E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3BCE98052367460A00777B8E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		3BCE98082367464A00777B8E /* PersonlInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonlInfoViewController.swift; sourceTree = "<group>"; };
 		3CC4C1500AF3225748954746 /* Pods_SportiveTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SportiveTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E9139F31647B44501EC6E49 /* Pods-Sportive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sportive.release.xcconfig"; path = "Target Support Files/Pods-Sportive/Pods-Sportive.release.xcconfig"; sourceTree = "<group>"; };
 		5FDF0EA66DFDA3679EF3841D /* Pods-SportiveUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportiveUITests.release.xcconfig"; path = "Target Support Files/Pods-SportiveUITests/Pods-SportiveUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -128,6 +132,7 @@
 		181B5F312366E499002E7246 /* Scenarios */ = {
 			isa = PBXGroup;
 			children = (
+				3BCE98012367454200777B8E /* ProfileTap */,
 				3BCE97FB236740FF00777B8E /* Login */,
 				81CD3CB32367113E00B4E8D5 /* ActivitiesTab */,
 				81CD3CA923670CEE00B4E8D5 /* UserTab */,
@@ -241,6 +246,39 @@
 			isa = PBXGroup;
 			children = (
 				3BCE97FF2367413D00777B8E /* LoginViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3BCE98012367454200777B8E /* ProfileTap */ = {
+			isa = PBXGroup;
+			children = (
+				3BCE9804236745A000777B8E /* Controller */,
+				3BCE98032367459000777B8E /* View */,
+				3BCE98022367458300777B8E /* Model */,
+			);
+			path = ProfileTap;
+			sourceTree = "<group>";
+		};
+		3BCE98022367458300777B8E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3BCE98032367459000777B8E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3BCE9804236745A000777B8E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3BCE98052367460A00777B8E /* ProfileViewController.swift */,
+				3BCE98082367464A00777B8E /* PersonlInfoViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -551,7 +589,9 @@
 				3BCE98002367413D00777B8E /* LoginViewController.swift in Sources */,
 				81CD3CAE23670DDA00B4E8D5 /* UserViewController.swift in Sources */,
 				81CD3CB223670F0C00B4E8D5 /* UserTableViewCell.swift in Sources */,
+				3BCE98062367460A00777B8E /* ProfileViewController.swift in Sources */,
 				18F0935D2341F338000B29CA /* AppDelegate.swift in Sources */,
+				3BCE98092367464A00777B8E /* PersonlInfoViewController.swift in Sources */,
 				181B5F422366E538002E7246 /* APIClient.swift in Sources */,
 				181B5F372366E4F7002E7246 /* CardView.swift in Sources */,
 				181B5F402366E538002E7246 /* APIRouter.swift in Sources */,

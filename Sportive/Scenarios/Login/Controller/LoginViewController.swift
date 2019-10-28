@@ -10,6 +10,7 @@ import UIKit
 
 class LoginViewController: UIViewController {
     @IBOutlet weak var yourEmailTf: UITextField!
+    @IBOutlet weak var passwordTF: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,5 +28,11 @@ class LoginViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBAction func logInButtonPressed(_ sender: UIButton) {
+    }
+    @IBAction func signUpButtonPressed(_ sender: UIButton) {
+    }
+    @IBAction func forgetPasswordPressed(_ sender: UIButton) {
+    }
+    
 }

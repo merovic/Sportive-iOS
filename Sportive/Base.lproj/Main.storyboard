@@ -26,6 +26,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
+                                            <action selector="logInButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9FY-yg-9Lh"/>
                                             <segue destination="KuX-oI-GZA" kind="show" id="dpH-jQ-crT"/>
                                         </connections>
                                     </button>
@@ -36,6 +37,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
+                                            <action selector="signUpButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tgk-bz-k32"/>
                                             <segue destination="EiB-ew-RV0" kind="show" id="1RW-XL-d6g"/>
                                         </connections>
                                     </button>
@@ -70,6 +72,9 @@
                                 <state key="normal" title="Forget Password ?">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="forgetPasswordPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6c7-l4-yya"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -88,6 +93,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="passwordTF" destination="Hta-8L-95q" id="GxM-4V-UdX"/>
                         <outlet property="yourEmailTf" destination="TUd-dA-3V4" id="VOB-bD-PPd"/>
                     </connections>
                 </viewController>

@@ -99,12 +99,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="17" y="39"/>
+            <point key="canvasLocation" x="15.942028985507248" y="38.839285714285715"/>
         </scene>
         <!--Profile-->
         <scene sceneID="PVj-Ws-CoP">
             <objects>
-                <viewController title="Profile" id="imO-3Z-iMM" sceneMemberID="viewController">
+                <viewController title="Profile" id="imO-3Z-iMM" customClass="ProfileViewController" customModule="Sportive" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zER-An-Pei">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1146"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -368,6 +368,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <size key="freeformSize" width="414" height="1200"/>
+                    <connections>
+                        <outlet property="mapView" destination="38j-co-FqJ" id="4JL-YW-OrG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="spB-3a-yO9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -774,10 +777,10 @@
             </objects>
             <point key="canvasLocation" x="-472" y="1578"/>
         </scene>
-        <!--View Controller-->
+        <!--Personl Info View Controller-->
         <scene sceneID="h1N-in-ApX">
             <objects>
-                <viewController id="1Lz-rj-RLe" sceneMemberID="viewController">
+                <viewController id="1Lz-rj-RLe" customClass="PersonlInfoViewController" customModule="Sportive" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qKM-xu-tvg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="946"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

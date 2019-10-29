@@ -25,7 +25,11 @@
 		3BCE98092367464A00777B8E /* PersonlInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCE98082367464A00777B8E /* PersonlInfoViewController.swift */; };
 		617423247F0A48871FFD6A5E /* Pods_SportiveTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CC4C1500AF3225748954746 /* Pods_SportiveTests.framework */; };
 		81355E052367478F001A9841 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81355E042367478F001A9841 /* TableViewCell.swift */; };
+		81387DB923684EF900B172DB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81387DB623684EF800B172DB /* Constants.swift */; };
+		81387DBA23684EF900B172DB /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81387DB723684EF800B172DB /* APIRouter.swift */; };
+		81387DBB23684EF900B172DB /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81387DB823684EF900B172DB /* APIClient.swift */; };
 		815358622366F1720095A98F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815358612366F1720095A98F /* SignUpViewController.swift */; };
+		81758CFC23685F0F004CD357 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81758CFB23685F0F004CD357 /* LoginResponse.swift */; };
 		81CD3CAE23670DDA00B4E8D5 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CD3CAD23670DDA00B4E8D5 /* UserViewController.swift */; };
 		81CD3CB223670F0C00B4E8D5 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CD3CB123670F0C00B4E8D5 /* UserTableViewCell.swift */; };
 		81CD3CB8236711D200B4E8D5 /* ActivitesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CD3CB7236711D200B4E8D5 /* ActivitesViewController.swift */; };
@@ -81,7 +85,11 @@
 		5FDF0EA66DFDA3679EF3841D /* Pods-SportiveUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportiveUITests.release.xcconfig"; path = "Target Support Files/Pods-SportiveUITests/Pods-SportiveUITests.release.xcconfig"; sourceTree = "<group>"; };
 		66150556E812A96C8D3169C9 /* Pods-SportiveTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportiveTests.debug.xcconfig"; path = "Target Support Files/Pods-SportiveTests/Pods-SportiveTests.debug.xcconfig"; sourceTree = "<group>"; };
 		81355E042367478F001A9841 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		81387DB623684EF800B172DB /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		81387DB723684EF800B172DB /* APIRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
+		81387DB823684EF900B172DB /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		815358612366F1720095A98F /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		81758CFB23685F0F004CD357 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		81CD3CAD23670DDA00B4E8D5 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		81CD3CB123670F0C00B4E8D5 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		81CD3CB7236711D200B4E8D5 /* ActivitesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitesViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +151,9 @@
 		181B5F322366E4A1002E7246 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				81387DB823684EF900B172DB /* APIClient.swift */,
+				81387DB723684EF800B172DB /* APIRouter.swift */,
+				81387DB623684EF800B172DB /* Constants.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -219,25 +230,11 @@
 		3BCE97FB236740FF00777B8E /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				81758CFA23685EF1004CD357 /* View */,
+				81758CF923685EE9004CD357 /* Model */,
 				3BCE97FE2367412200777B8E /* Controller */,
-				3BCE97FD2367411700777B8E /* View */,
-				3BCE97FC2367410C00777B8E /* Model */,
 			);
 			path = Login;
-			sourceTree = "<group>";
-		};
-		3BCE97FC2367410C00777B8E /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		3BCE97FD2367411700777B8E /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		3BCE97FE2367412200777B8E /* Controller */ = {
@@ -281,6 +278,21 @@
 				3BCE98082367464A00777B8E /* PersonlInfoViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		81758CF923685EE9004CD357 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				81758CFB23685F0F004CD357 /* LoginResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		81758CFA23685EF1004CD357 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		81CD3CA923670CEE00B4E8D5 /* UserTab */ = {
@@ -586,7 +598,10 @@
 				815358622366F1720095A98F /* SignUpViewController.swift in Sources */,
 				81355E052367478F001A9841 /* TableViewCell.swift in Sources */,
 				181B5F362366E4F7002E7246 /* DesignableUITextField.swift in Sources */,
+				81387DBB23684EF900B172DB /* APIClient.swift in Sources */,
+				81758CFC23685F0F004CD357 /* LoginResponse.swift in Sources */,
 				18F093612341F338000B29CA /* ViewController.swift in Sources */,
+				81387DBA23684EF900B172DB /* APIRouter.swift in Sources */,
 				3BCE98002367413D00777B8E /* LoginViewController.swift in Sources */,
 				81CD3CAE23670DDA00B4E8D5 /* UserViewController.swift in Sources */,
 				81CD3CB223670F0C00B4E8D5 /* UserTableViewCell.swift in Sources */,
@@ -600,6 +615,7 @@
 				81CD3CBA2367126C00B4E8D5 /* ActivitiesTableViewCell.swift in Sources */,
 				81CD3CB8236711D200B4E8D5 /* ActivitesViewController.swift in Sources */,
 				3B3A52E623678F9E0018FA82 /* ImageCollectionViewCell.swift in Sources */,
+				81387DB923684EF900B172DB /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -27,6 +27,12 @@ class APIClient {
     
     //---------------------------------------------------
     
-    
+    static func loginUser(email: String, password: String, completion:@escaping (Result<[LoginResponse],AFError>)->Void) {
+      performRequest(route: APIRouter.login(email: email, password: password), completion: completion)
+    }
+    static func getAllCenters(completion:@escaping (Result<[Centers],AFError>)->Void) {
+        performRequest(route: APIRouter.Select_all_center, completion: completion)
+        }
+
 }
 

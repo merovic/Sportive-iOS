@@ -18,6 +18,7 @@
 		18F093692341F33A000B29CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F093672341F33A000B29CA /* LaunchScreen.storyboard */; };
 		18F093742341F33A000B29CA /* SportiveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F093732341F33A000B29CA /* SportiveTests.swift */; };
 		18F0937F2341F33A000B29CA /* SportiveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F0937E2341F33A000B29CA /* SportiveUITests.swift */; };
+		3B13C10B23689642000F8629 /* Centers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B13C10A23689642000F8629 /* Centers.swift */; };
 		3B3A52E423678EF20018FA82 /* GameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3A52E323678EF20018FA82 /* GameTableViewCell.swift */; };
 		3B3A52E623678F9E0018FA82 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3A52E523678F9E0018FA82 /* ImageCollectionViewCell.swift */; };
 		3BCE98002367413D00777B8E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCE97FF2367413D00777B8E /* LoginViewController.swift */; };
@@ -75,6 +76,7 @@
 		18F0937E2341F33A000B29CA /* SportiveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportiveUITests.swift; sourceTree = "<group>"; };
 		18F093802341F33A000B29CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3619FBD4E9D4F8AD1DFA6834 /* Pods_Sportive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sportive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B13C10A23689642000F8629 /* Centers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Centers.swift; sourceTree = "<group>"; };
 		3B3A52E323678EF20018FA82 /* GameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTableViewCell.swift; sourceTree = "<group>"; };
 		3B3A52E523678F9E0018FA82 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		3BCE97FF2367413D00777B8E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 				18F0935E2341F338000B29CA /* SceneDelegate.swift */,
 				18F093602341F338000B29CA /* ViewController.swift */,
 				815358612366F1720095A98F /* SignUpViewController.swift */,
+				3B13C10A23689642000F8629 /* Centers.swift */,
 				81355E042367478F001A9841 /* TableViewCell.swift */,
 				18F093622341F338000B29CA /* Main.storyboard */,
 				18F093652341F33A000B29CA /* Assets.xcassets */,
@@ -601,6 +604,7 @@
 				81387DBB23684EF900B172DB /* APIClient.swift in Sources */,
 				81758CFC23685F0F004CD357 /* LoginResponse.swift in Sources */,
 				18F093612341F338000B29CA /* ViewController.swift in Sources */,
+				3B13C10B23689642000F8629 /* Centers.swift in Sources */,
 				81387DBA23684EF900B172DB /* APIRouter.swift in Sources */,
 				3BCE98002367413D00777B8E /* LoginViewController.swift in Sources */,
 				81CD3CAE23670DDA00B4E8D5 /* UserViewController.swift in Sources */,

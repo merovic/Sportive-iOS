@@ -27,7 +27,6 @@
                                         </state>
                                         <connections>
                                             <action selector="logInButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9FY-yg-9Lh"/>
-                                            <segue destination="KuX-oI-GZA" kind="show" id="dpH-jQ-crT"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cam-gU-QLx">
@@ -95,6 +94,7 @@
                     <connections>
                         <outlet property="passwordTF" destination="Hta-8L-95q" id="GxM-4V-UdX"/>
                         <outlet property="yourEmailTf" destination="TUd-dA-3V4" id="VOB-bD-PPd"/>
+                        <segue destination="KuX-oI-GZA" kind="show" identifier="goToHome" id="nwa-dl-CdX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -13,6 +13,8 @@ pod 'SDWebImage', '~> 5.0'
 pod 'Firebase/Core'
 pod 'Firebase/Storage'
 pod 'BEMCheckBox'
+pod 'NVActivityIndicatorView'
+
 
 
   target 'SportiveTests' do

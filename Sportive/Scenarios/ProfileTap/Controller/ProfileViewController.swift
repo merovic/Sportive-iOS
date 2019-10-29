@@ -53,13 +53,13 @@ extension ProfileViewController : UITableViewDataSource {
     //TODO: Declare numberOfRowsInSection here:
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return 0
     }
     //TODO: Declare cellForRowAtIndexPath here:
 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        return UITableViewCell()
     }
     
     
@@ -73,12 +73,12 @@ extension ProfileViewController : UICollectionViewDelegate {
 extension ProfileViewController : UICollectionViewDataSource {
     //TODO: Declare numberOfRowsInSection here:
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        <#code#>
+        return 0
     }
     //TODO: Declare cellForItemAt here:
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
+        return UICollectionViewCell()
     }
     
     

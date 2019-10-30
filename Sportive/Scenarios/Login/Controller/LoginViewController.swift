@@ -76,7 +76,7 @@ class LoginViewController: UIViewController,NVActivityIndicatorViewable {
         DispatchQueue.main.async {
             // Test Login request
             if let email = self.yourEmailTf.text,!email.isEmpty , let password = self.passwordTF.text,!password.isEmpty {
-                APIClient.loginUser(email:email ,password:password,completion: { result in
+                APIClient.loginCenterAndTrainer(email:email ,password:password,completion: { result in
                             switch result {
                             case .success(let response):
                                 DispatchQueue.main.async {

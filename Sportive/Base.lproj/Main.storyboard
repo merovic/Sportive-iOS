@@ -520,21 +520,34 @@
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="nameAction:" destination="EiB-ew-RV0" eventType="editingChanged" id="JCz-MA-zpW"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iSo-UY-uat">
                                         <rect key="frame" x="0.0" y="44" width="334" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="emailAction:" destination="osC-bD-PdL" eventType="editingChanged" id="LcD-fa-nRS"/>
+                                            <action selector="emailAction:" destination="EiB-ew-RV0" eventType="editingChanged" id="Orf-o7-m3f"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3YN-v5-ev1">
                                         <rect key="frame" x="0.0" y="88" width="334" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="passAction:" destination="EiB-ew-RV0" eventType="editingChanged" id="nJF-NL-wOT"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mobile" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bmr-dx-lsd">
                                         <rect key="frame" x="0.0" y="132" width="334" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="mobileAction:" destination="EiB-ew-RV0" eventType="editingChanged" id="cPW-YW-lGG"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -567,7 +580,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="6LX-JK-9WJ">
                                         <rect key="frame" x="0.0" y="0.0" width="72.5" height="25"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NsZ-ia-bh9" customClass="BEMCheckBox">
+                                            <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NsZ-ia-bh9" customClass="BEMCheckBox">
                                                 <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
@@ -580,7 +593,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="chickBoxClicked:" destination="EiB-ew-RV0" eventType="valueChanged" id="meI-m1-d16"/>
+                                                    <action selector="checkBoxChange:" destination="EiB-ew-RV0" eventType="valueChanged" id="PcW-Fo-kir"/>
                                                 </connections>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aG0-NA-ycH">
@@ -594,7 +607,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Zfp-Ue-GAE">
                                         <rect key="frame" x="97.5" y="0.0" width="72.5" height="25"/>
                                         <subviews>
-                                            <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZAW-hB-csU" customClass="BEMCheckBox">
+                                            <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZAW-hB-csU" customClass="BEMCheckBox">
                                                 <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
@@ -607,7 +620,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="chickBoxClicked:" destination="EiB-ew-RV0" eventType="valueChanged" id="dq9-rJ-m6a"/>
+                                                    <action selector="checkBoxChange:" destination="EiB-ew-RV0" eventType="valueChanged" id="O8d-tu-DYt"/>
                                                 </connections>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8D3-kv-Gmg">
@@ -621,7 +634,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="cPE-0u-id5">
                                         <rect key="frame" x="195" y="0.0" width="72.5" height="25"/>
                                         <subviews>
-                                            <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="odY-gN-7Wh" customClass="BEMCheckBox">
+                                            <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="odY-gN-7Wh" customClass="BEMCheckBox">
                                                 <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
@@ -634,7 +647,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="chickBoxClicked:" destination="EiB-ew-RV0" eventType="valueChanged" id="Qf7-kF-fcY"/>
+                                                    <action selector="checkBoxChange:" destination="EiB-ew-RV0" eventType="valueChanged" id="M9Z-EX-YYZ"/>
                                                 </connections>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trainer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zaz-M5-VKK">
@@ -651,6 +664,9 @@
                                 <rect key="frame" x="20" y="403.5" width="334" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="locationAction:" destination="EiB-ew-RV0" eventType="touchDown" id="Qim-v9-4jL"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -675,14 +691,18 @@
                     </view>
                     <navigationItem key="navigationItem" id="22i-qy-ZM5"/>
                     <connections>
+                        <outlet property="centerCk" destination="NsZ-ia-bh9" id="UEP-XX-sUv"/>
                         <outlet property="emailTF" destination="iSo-UY-uat" id="Zhq-2x-aar"/>
                         <outlet property="locationTF" destination="VTb-QQ-65Z" id="fGG-oO-L02"/>
                         <outlet property="mobileTF" destination="bmr-dx-lsd" id="3o8-cQ-wLk"/>
                         <outlet property="nameTF" destination="IFG-4G-L26" id="SIq-VU-ucj"/>
                         <outlet property="passwordTF" destination="3YN-v5-ev1" id="m1O-xi-8GS"/>
+                        <outlet property="tarinerCk" destination="odY-gN-7Wh" id="gT0-Tk-xs6"/>
+                        <outlet property="userCk" destination="ZAW-hB-csU" id="pFt-4B-fKf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vwD-Ad-WgK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="osC-bD-PdL" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="796" y="39"/>
         </scene>

@@ -18,6 +18,7 @@
 		18F093692341F33A000B29CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F093672341F33A000B29CA /* LaunchScreen.storyboard */; };
 		18F093742341F33A000B29CA /* SportiveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F093732341F33A000B29CA /* SportiveTests.swift */; };
 		18F0937F2341F33A000B29CA /* SportiveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F0937E2341F33A000B29CA /* SportiveUITests.swift */; };
+		3B10AEB9236ADDA000F389A1 /* MapKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B10AEB8236ADDA000F389A1 /* MapKitViewController.swift */; };
 		3B13C10B23689642000F8629 /* Centers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B13C10A23689642000F8629 /* Centers.swift */; };
 		3B1A8AF02369918400B49498 /* LoginResponseOfUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1A8AEF2369918400B49498 /* LoginResponseOfUser.swift */; };
 		3B1A8AF2236996AD00B49498 /* REG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1A8AF1236996AD00B49498 /* REG.swift */; };
@@ -78,6 +79,7 @@
 		18F0937E2341F33A000B29CA /* SportiveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportiveUITests.swift; sourceTree = "<group>"; };
 		18F093802341F33A000B29CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3619FBD4E9D4F8AD1DFA6834 /* Pods_Sportive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sportive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B10AEB8236ADDA000F389A1 /* MapKitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapKitViewController.swift; sourceTree = "<group>"; };
 		3B13C10A23689642000F8629 /* Centers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Centers.swift; sourceTree = "<group>"; };
 		3B1A8AEF2369918400B49498 /* LoginResponseOfUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponseOfUser.swift; sourceTree = "<group>"; };
 		3B1A8AF1236996AD00B49498 /* REG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = REG.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 				18F093602341F338000B29CA /* ViewController.swift */,
 				3B1A8AF1236996AD00B49498 /* REG.swift */,
 				815358612366F1720095A98F /* SignUpViewController.swift */,
+				3B10AEB8236ADDA000F389A1 /* MapKitViewController.swift */,
 				3B13C10A23689642000F8629 /* Centers.swift */,
 				81355E042367478F001A9841 /* TableViewCell.swift */,
 				18F093622341F338000B29CA /* Main.storyboard */,
@@ -610,6 +613,7 @@
 				81387DBB23684EF900B172DB /* APIClient.swift in Sources */,
 				81758CFC23685F0F004CD357 /* LoginResponse.swift in Sources */,
 				18F093612341F338000B29CA /* ViewController.swift in Sources */,
+				3B10AEB9236ADDA000F389A1 /* MapKitViewController.swift in Sources */,
 				3B13C10B23689642000F8629 /* Centers.swift in Sources */,
 				81387DBA23684EF900B172DB /* APIRouter.swift in Sources */,
 				3BCE98002367413D00777B8E /* LoginViewController.swift in Sources */,

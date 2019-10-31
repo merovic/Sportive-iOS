@@ -39,10 +39,25 @@ class APIClient {
 
     }
     
+    static func updateCenter (desctiption : String,history : String,img_1 : String,img_2 : String,img_3 : String,img_4 : String ,id : Int, completion:@escaping (Result<String,AFError>)->Void) {
+        performRequestSimple(route: .Update_center(desctiption: desctiption, history: history, img_1: img_1, img_2: img_2, img_3: img_3, img_4: img_4, id: id), completion: completion)
+
+    }
+    
+    static func AddGame (id_center : Int,name_game : String,coach : String, completion:@escaping (Result<String,AFError>)->Void) {
+           performRequestSimple(route: .AddGame(id_center: id_center, name_game: name_game, coach: coach), completion: completion)
+
+
+       }
+    
+    
+    
+    
     
     static func getAllCenters(completion:@escaping (Result<[Centers],AFError>)->Void) {
         performRequest(route: APIRouter.Select_all_center, completion: completion)
         }
+    
 
 }
 

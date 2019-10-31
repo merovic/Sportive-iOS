@@ -148,6 +148,7 @@
 		181B5F312366E499002E7246 /* Scenarios */ = {
 			isa = PBXGroup;
 			children = (
+				3B10AEBA236AF69A00F389A1 /* SignUp */,
 				3BCE98012367454200777B8E /* ProfileTap */,
 				3BCE97FB236740FF00777B8E /* Login */,
 				81CD3CB32367113E00B4E8D5 /* ActivitiesTab */,
@@ -198,8 +199,6 @@
 				18F0935E2341F338000B29CA /* SceneDelegate.swift */,
 				18F093602341F338000B29CA /* ViewController.swift */,
 				3B1A8AF1236996AD00B49498 /* REG.swift */,
-				815358612366F1720095A98F /* SignUpViewController.swift */,
-				3B10AEB8236ADDA000F389A1 /* MapKitViewController.swift */,
 				3B13C10A23689642000F8629 /* Centers.swift */,
 				81355E042367478F001A9841 /* TableViewCell.swift */,
 				18F093622341F338000B29CA /* Main.storyboard */,
@@ -236,6 +235,23 @@
 				CB5E728723185DDB02A864BD /* Pods_SportiveUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3B10AEBA236AF69A00F389A1 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				3B10AEBB236AF6BF00F389A1 /* controller */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		3B10AEBB236AF6BF00F389A1 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				815358612366F1720095A98F /* SignUpViewController.swift */,
+				3B10AEB8236ADDA000F389A1 /* MapKitViewController.swift */,
+			);
+			path = controller;
 			sourceTree = "<group>";
 		};
 		3BCE97FB236740FF00777B8E /* Login */ = {

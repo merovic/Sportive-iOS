@@ -24,7 +24,7 @@ enum APIRouter: URLRequestConvertible {
     case Join_Center (id_center : Int)
     case Select_join_iduser (id_user : Int)
     case Update_center (desctiption : String ,history : String ,
-    String,img_1 : String,img_2 : String,img_3 : String,img_4 : String ,id : Int)
+        img_1 : String , img_2:String , img_3: String ,  img_4: String ,id : Int)
     case Update_user_or_center ( name : String  ,password:String,phone : String  ,long : String ,lat : String ,images : String , desctiption : String , id : Int )
     
     
@@ -136,7 +136,7 @@ enum APIRouter: URLRequestConvertible {
             return [K.Join_Center.id_center : id_center]
         case .Select_join_iduser(let id_user):
             return [K.Select_join_iduser.id_user : id_user]
-        case .Update_center(let desctiption, let history, _, let img_1, let img_2, let img_3, let img_4, let id):
+        case .Update_center(let desctiption, let history, let img_1, let img_2, let img_3, let img_4, let id):
             return [K.Update_center.desctiption : desctiption , K.Update_center.history : history , K.Update_center.img_1 : img_1,K.Update_center.img_2 : img_2,K.Update_center.img_3 : img_3,K.Update_center.img_4 : img_4,K.Update_center.id : id]
         case .Update_user_or_center(let name, let password, let phone, let long, let lat, let images, let desctiption, let id):
             return [K.Update_user_or_center.name : name , K.Update_user_or_center.password : password , K.Update_user_or_center.phone : phone , K.Update_user_or_center.long: long , K.Update_user_or_center.lat :  lat,K.Update_user_or_center.images: images , K.Update_user_or_center.desctiption: desctiption , K.Update_user_or_center.id: id]

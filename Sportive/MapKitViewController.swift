@@ -9,10 +9,19 @@
 import UIKit
 import MapKit
 import CoreLocation
+
+
+//create protcole
+protocol CanReceive {
+    //create fun
+    func dataReceived(lat : String , long : String)
+    
+}
 class MapKitViewController: UIViewController , CLLocationManagerDelegate{
 
     var lat:String = ""
     var long:String = ""
+    var delegate : CanReceive?
    
     @IBOutlet weak var mapView: MKMapView!
     let locationManger = CLLocationManager()
@@ -42,6 +51,8 @@ class MapKitViewController: UIViewController , CLLocationManagerDelegate{
     
     @IBAction func doneChoosingLocation(_ sender:
         UIButton) {
+        delegate?.dataReceived(lat: lat, long: long)
+        dismiss(animated: true, completion: nil)
         
         
     }
@@ -60,7 +71,7 @@ class MapKitViewController: UIViewController , CLLocationManagerDelegate{
     }
     
     @objc func longTap(sender: UIGestureRecognizer){
-        print("tap")
+       
         if sender.state == .began {
             let locationInView = sender.location(in: mapView)
             let locationOnMap = mapView.convert(locationInView, toCoordinateFrom: mapView)
@@ -135,11 +146,13 @@ class MapKitViewController: UIViewController , CLLocationManagerDelegate{
     // corelocation methodes
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        locationManger.stopUpdatingLocation()
          guard let location = locations.last else { return }
                let region = MKCoordinateRegion.init(center: location.coordinate, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
         lat = String(location.coordinate.latitude)
         long = String(location.coordinate.longitude)
-        print(lat, long)
+       
                mapView.setRegion(region, animated: true)
     }
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {

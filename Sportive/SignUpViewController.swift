@@ -11,15 +11,20 @@ import BEMCheckBox
 import NVActivityIndicatorView
 
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: UIViewController   {
  
     var type : String = ""
+    
+    var latLocation : String = ""
+    var longLocation : String = ""
+    
     
     @IBOutlet weak var nameTF: UITextField!
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var mobileTF: UITextField!
     @IBOutlet weak var locationTF: UITextField!
+    
     
     @IBOutlet weak var centerCk: BEMCheckBox!
     
@@ -29,6 +34,7 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    
 
         
     }
@@ -66,6 +72,8 @@ class SignUpViewController: UIViewController {
     
     
     @IBAction func locationAction(_ sender: UITextField) {
+       performSegue(withIdentifier: "goTomap", sender: self)
+        
     }
     
     
@@ -77,7 +85,12 @@ class SignUpViewController: UIViewController {
                                  }
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goTomap" {
+            let vc = segue.destination as! MapKitViewController
+            vc.delegate = self
+        }
+    }
     
    
     
@@ -113,7 +126,7 @@ class SignUpViewController: UIViewController {
            DispatchQueue.main.async {
                // Test Login request
                if let name = self.nameTF.text,!name.isEmpty , let email = self.emailTF.text,!email.isEmpty ,  let password = self.passwordTF.text,!password.isEmpty , let mobil = self.mobileTF.text,!mobil.isEmpty , let location = self.locationTF.text,!location.isEmpty {
-                APIClient.Register(name: name, email: email, password: password, phone: mobil, type: self.type, long: "", lat: "", images: "", famous: "", desctiption: "", history: "", img_1: "", img_2: "", img_3: "", img_4: "",completion: { result in
+                APIClient.Register(name: name, email: email, password: password, phone: mobil, type: self.type, long: self.longLocation, lat: self.latLocation, images: "", famous: "", desctiption: "", history: "", img_1: "", img_2: "", img_3: "", img_4: "",completion: { result in
                                switch result {
                                case .success(let response):
                                    DispatchQueue.main.async {
@@ -157,5 +170,18 @@ class SignUpViewController: UIViewController {
     }
     
     
+   
+    
 }
 
+
+extension SignUpViewController :  CanReceive {
+    func dataReceived(lat: String, long: String) {
+        latLocation = lat
+        longLocation = long
+    }
+    
+   
+    
+    
+}

@@ -61,13 +61,7 @@ class SignUpViewController: UIViewController   {
     }
 
     
-    @IBAction func nameAction(_ sender: UITextField) {
-        if sender.text!.count <= 2 {
-            rongVaildateTextField(textField: sender)
-                }else {
-            successVaildateTextField(textField: sender)
-                                 }
-    }
+
     
     
     
@@ -77,14 +71,7 @@ class SignUpViewController: UIViewController   {
     }
     
     
-    @IBAction func mobileAction(_ sender: UITextField) {
-        if sender.text!.count <= 10 {
-                   rongVaildateTextField(textField: sender)
-                   }else {
-               successVaildateTextField(textField: sender)
-                                 }
-    }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goTomap" {
             let vc = segue.destination as! MapKitViewController
@@ -93,23 +80,7 @@ class SignUpViewController: UIViewController   {
     }
     
    
-    
-    @IBAction func emailAction(_ sender: UITextField) {
-        let emailValid = vaildateEmail(emailStr: sender.text!)
-        if emailValid {
-            successVaildateTextField(textField: sender)
-        }else {
-            rongVaildateTextField(textField: sender)
-        }
-    }
-    
-    @IBAction func passAction(_ sender: UITextField) {
-        if sender.text!.count < 8 {
-            rongVaildateTextField(textField: sender)
-            }else {
-        successVaildateTextField(textField: sender)
-                          }
-    }
+
     @IBAction func signUpButtonPressed(_ sender: UIButton) {
         register()
         
@@ -150,24 +121,7 @@ class SignUpViewController: UIViewController   {
     
     
     
-    
-    func rongVaildateTextField(textField : UITextField)  {
-        textField.layer.borderWidth = 4
-        textField.layer.borderColor = #colorLiteral(red: 0.5807225108, green: 0.066734083, blue: 0, alpha: 1)
-    }
-    
-    func successVaildateTextField(textField : UITextField)  {
-        textField.layer.borderWidth = 4
-        textField.layer.borderColor = #colorLiteral(red: 0, green: 0.5628422499, blue: 0.3188166618, alpha: 1)
-    }
-    
-    
-    func vaildateEmail(emailStr : String) -> Bool {
-        let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-        let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegex)
-        return emailPred.evaluate(with: emailStr)
-        
-    }
+
     
 }
 

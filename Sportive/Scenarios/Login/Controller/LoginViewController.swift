@@ -8,6 +8,7 @@
 
 import UIKit
 import NVActivityIndicatorView
+import SwiftyJSON
 
 class LoginViewController: UIViewController,NVActivityIndicatorViewable {
     
@@ -26,24 +27,7 @@ class LoginViewController: UIViewController,NVActivityIndicatorViewable {
     
     //MARK - IBAction
 
-    @IBAction func emailAction(_ sender: UITextField) {
-        let emailValid = vaildateEmail(emailStr: sender.text!)
-        if emailValid {
-            successVaildateTextField(textField: sender)
-        }else {
-            rongVaildateTextField(textField: sender)
-        }
  
-    }
-    
-    @IBAction func passwordAction(_ sender: UITextField) {
-        if sender.text!.count < 8 {
-                       rongVaildateTextField(textField: sender)
-                   }else {
-                       successVaildateTextField(textField: sender)
-                   }
- 
-    }
     
 
     @IBAction func logInButtonPressed(_ sender: UIButton) {
@@ -76,25 +60,42 @@ class LoginViewController: UIViewController,NVActivityIndicatorViewable {
         DispatchQueue.main.async {
             // Test Login request
             if let email = self.yourEmailTf.text,!email.isEmpty , let password = self.passwordTF.text,!password.isEmpty {
-                APIClient.loginCenterAndTrainer(email:email ,password:password,completion: { result in
-                            switch result {
-                            case .success(let response):
-                                DispatchQueue.main.async {
-                                 //   user.append(response[0].)
-                                    self.user = response[0]
-                                    print(self.user)
-                                self.performSegue(withIdentifier: "goToHome", sender: self)
-                                    self.stopAnimating()
-                                }
-                            case .failure(let error):
-                                print(error.localizedDescription)
-                                self.stopAnimating()
-                            }
-                        })
+                APIClient.loginUser(email: email, password: password , completion: { result in
+                switch result {
+
+                    case .success(let response):
+                        DispatchQueue.main.async {
+                        //   user.append(response[0].)
+                       // self.user = response[0]
+                      //  print(self.user)
+                            
+                            print(response)
+                    self.performSegue(withIdentifier: "goToHome", sender: self)
+                            self.stopAnimating()
+                        }
+                    case .failure(let error):
+                    print(error.localizedDescription)
+                    self.stopAnimating()
+                    
+                    }
+                    })
+//                APIClient.loginCenterAndTrainer(email:email ,password:password,completion: { result in
+//                            switch result {
+//                            case .success(let response):
+//                                DispatchQueue.main.async {
+//                                 //   user.append(response[0].)
+//                                    self.user = response[0]
+//                                    print(self.user)
+//                                self.performSegue(withIdentifier: "goToHome", sender: self)
+//                                    self.stopAnimating()
+//                                }
+//                            case .failure(let error):
+//                                print(error.localizedDescription)
+//                                self.stopAnimating()
+//                            }
+//                        })
             }else{
                 
-                self.rongVaildateTextField(textField: self.yourEmailTf)
-                self.rongVaildateTextField(textField: self.passwordTF)
                 self.stopAnimating()
  
             }

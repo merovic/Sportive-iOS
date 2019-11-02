@@ -13,6 +13,8 @@ class UserTableViewCell: UITableViewCell {
     @IBOutlet weak var ImageView: UIImageView!
     @IBOutlet weak var emailLbl: UILabel!
     
+    @IBOutlet weak var nameLbl: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

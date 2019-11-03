@@ -34,6 +34,7 @@
 		81387DBB23684EF900B172DB /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81387DB823684EF900B172DB /* APIClient.swift */; };
 		815358622366F1720095A98F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815358612366F1720095A98F /* SignUpViewController.swift */; };
 		81758CFC23685F0F004CD357 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81758CFB23685F0F004CD357 /* LoginResponse.swift */; };
+		81A3A148236F169E0028709C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81A3A147236F169E0028709C /* GoogleService-Info.plist */; };
 		81CD3CAE23670DDA00B4E8D5 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CD3CAD23670DDA00B4E8D5 /* UserViewController.swift */; };
 		81CD3CB223670F0C00B4E8D5 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CD3CB123670F0C00B4E8D5 /* UserTableViewCell.swift */; };
 		81CD3CB8236711D200B4E8D5 /* ActivitesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CD3CB7236711D200B4E8D5 /* ActivitesViewController.swift */; };
@@ -98,6 +99,7 @@
 		81387DB823684EF900B172DB /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		815358612366F1720095A98F /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		81758CFB23685F0F004CD357 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		81A3A147236F169E0028709C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		81CD3CAD23670DDA00B4E8D5 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		81CD3CB123670F0C00B4E8D5 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		81CD3CB7236711D200B4E8D5 /* ActivitesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitesViewController.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 				18F093622341F338000B29CA /* Main.storyboard */,
 				18F093652341F33A000B29CA /* Assets.xcassets */,
 				18F093672341F33A000B29CA /* LaunchScreen.storyboard */,
+				81A3A147236F169E0028709C /* GoogleService-Info.plist */,
 				18F0936A2341F33A000B29CA /* Info.plist */,
 			);
 			path = Sportive;
@@ -511,6 +514,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18F093692341F33A000B29CA /* LaunchScreen.storyboard in Resources */,
+				81A3A148236F169E0028709C /* GoogleService-Info.plist in Resources */,
 				18F093662341F33A000B29CA /* Assets.xcassets in Resources */,
 				18F093642341F338000B29CA /* Main.storyboard in Resources */,
 			);

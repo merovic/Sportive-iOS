@@ -118,13 +118,10 @@
 		</dict>
 		<key>NVActivityIndicatorView.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
 			<integer>17</integer>
-		</dict>
-		<key>NVActivityIndicatorView.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>22</integer>
 		</dict>
 		<key>Pods-Sportive.xcscheme</key>
 		<dict>
@@ -154,10 +151,12 @@
 			<key>orderHint</key>
 			<integer>21</integer>
 		</dict>
-		<key>SwiftyJSON.xcscheme_^#shared#^_</key>
+		<key>SwiftyJSON.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
-			<integer>23</integer>
+			<integer>22</integer>
 		</dict>
 		<key>nanopb.xcscheme</key>
 		<dict>

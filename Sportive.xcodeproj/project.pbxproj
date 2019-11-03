@@ -19,7 +19,6 @@
 		18F093742341F33A000B29CA /* SportiveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F093732341F33A000B29CA /* SportiveTests.swift */; };
 		18F0937F2341F33A000B29CA /* SportiveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F0937E2341F33A000B29CA /* SportiveUITests.swift */; };
 		3B10AEB9236ADDA000F389A1 /* MapKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B10AEB8236ADDA000F389A1 /* MapKitViewController.swift */; };
-		3B13C10B23689642000F8629 /* Centers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B13C10A23689642000F8629 /* Centers.swift */; };
 		3B1A8AF02369918400B49498 /* LoginResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1A8AEF2369918400B49498 /* LoginResponses.swift */; };
 		3B1A8AF2236996AD00B49498 /* REG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1A8AF1236996AD00B49498 /* REG.swift */; };
 		3B3A52E423678EF20018FA82 /* GameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3A52E323678EF20018FA82 /* GameTableViewCell.swift */; };
@@ -34,6 +33,11 @@
 		81387DBB23684EF900B172DB /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81387DB823684EF900B172DB /* APIClient.swift */; };
 		815358622366F1720095A98F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815358612366F1720095A98F /* SignUpViewController.swift */; };
 		81758CFC23685F0F004CD357 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81758CFB23685F0F004CD357 /* LoginResponse.swift */; };
+		81921A8B236F244400BD1765 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81921A8A236F244400BD1765 /* Game.swift */; };
+		81921A8D236F244C00BD1765 /* CenterTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81921A8C236F244C00BD1765 /* CenterTabBar.swift */; };
+		81921A8F236F245400BD1765 /* UserTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81921A8E236F245400BD1765 /* UserTabBar.swift */; };
+		81921A91236F246800BD1765 /* Centers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81921A90236F246800BD1765 /* Centers.swift */; };
+		81921A93236F27CB00BD1765 /* Center.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81921A92236F27CB00BD1765 /* Center.swift */; };
 		81A3A148236F169E0028709C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81A3A147236F169E0028709C /* GoogleService-Info.plist */; };
 		81CD3CAE23670DDA00B4E8D5 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CD3CAD23670DDA00B4E8D5 /* UserViewController.swift */; };
 		81CD3CB223670F0C00B4E8D5 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CD3CB123670F0C00B4E8D5 /* UserTableViewCell.swift */; };
@@ -81,7 +85,6 @@
 		18F093802341F33A000B29CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3619FBD4E9D4F8AD1DFA6834 /* Pods_Sportive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sportive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B10AEB8236ADDA000F389A1 /* MapKitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapKitViewController.swift; sourceTree = "<group>"; };
-		3B13C10A23689642000F8629 /* Centers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Centers.swift; sourceTree = "<group>"; };
 		3B1A8AEF2369918400B49498 /* LoginResponses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponses.swift; sourceTree = "<group>"; };
 		3B1A8AF1236996AD00B49498 /* REG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = REG.swift; sourceTree = "<group>"; };
 		3B3A52E323678EF20018FA82 /* GameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTableViewCell.swift; sourceTree = "<group>"; };
@@ -99,6 +102,11 @@
 		81387DB823684EF900B172DB /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		815358612366F1720095A98F /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		81758CFB23685F0F004CD357 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		81921A8A236F244400BD1765 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		81921A8C236F244C00BD1765 /* CenterTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterTabBar.swift; sourceTree = "<group>"; };
+		81921A8E236F245400BD1765 /* UserTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTabBar.swift; sourceTree = "<group>"; };
+		81921A90236F246800BD1765 /* Centers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Centers.swift; sourceTree = "<group>"; };
+		81921A92236F27CB00BD1765 /* Center.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Center.swift; sourceTree = "<group>"; };
 		81A3A147236F169E0028709C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		81CD3CAD23670DDA00B4E8D5 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		81CD3CB123670F0C00B4E8D5 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
@@ -201,7 +209,9 @@
 				18F0935E2341F338000B29CA /* SceneDelegate.swift */,
 				18F093602341F338000B29CA /* ViewController.swift */,
 				3B1A8AF1236996AD00B49498 /* REG.swift */,
-				3B13C10A23689642000F8629 /* Centers.swift */,
+				81921A90236F246800BD1765 /* Centers.swift */,
+				81921A8C236F244C00BD1765 /* CenterTabBar.swift */,
+				81921A8E236F245400BD1765 /* UserTabBar.swift */,
 				81355E042367478F001A9841 /* TableViewCell.swift */,
 				18F093622341F338000B29CA /* Main.storyboard */,
 				18F093652341F33A000B29CA /* Assets.xcassets */,
@@ -278,18 +288,11 @@
 		3BCE98012367454200777B8E /* ProfileTap */ = {
 			isa = PBXGroup;
 			children = (
+				81921A89236F243900BD1765 /* Model */,
 				3BCE9804236745A000777B8E /* Controller */,
 				3BCE98032367459000777B8E /* View */,
-				3BCE98022367458300777B8E /* Model */,
 			);
 			path = ProfileTap;
-			sourceTree = "<group>";
-		};
-		3BCE98022367458300777B8E /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		3BCE98032367459000777B8E /* View */ = {
@@ -315,6 +318,7 @@
 			children = (
 				81758CFB23685F0F004CD357 /* LoginResponse.swift */,
 				3B1A8AEF2369918400B49498 /* LoginResponses.swift */,
+				81921A92236F27CB00BD1765 /* Center.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -324,6 +328,14 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		81921A89236F243900BD1765 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				81921A8A236F244400BD1765 /* Game.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		81CD3CA923670CEE00B4E8D5 /* UserTab */ = {
@@ -627,15 +639,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81921A91236F246800BD1765 /* Centers.swift in Sources */,
 				815358622366F1720095A98F /* SignUpViewController.swift in Sources */,
 				81355E052367478F001A9841 /* TableViewCell.swift in Sources */,
 				181B5F362366E4F7002E7246 /* DesignableUITextField.swift in Sources */,
+				81921A93236F27CB00BD1765 /* Center.swift in Sources */,
+				81921A8B236F244400BD1765 /* Game.swift in Sources */,
 				81387DBB23684EF900B172DB /* APIClient.swift in Sources */,
 				81758CFC23685F0F004CD357 /* LoginResponse.swift in Sources */,
 				18F093612341F338000B29CA /* ViewController.swift in Sources */,
 				3B10AEB9236ADDA000F389A1 /* MapKitViewController.swift in Sources */,
-				3B13C10B23689642000F8629 /* Centers.swift in Sources */,
 				81387DBA23684EF900B172DB /* APIRouter.swift in Sources */,
+				81921A8F236F245400BD1765 /* UserTabBar.swift in Sources */,
 				3BCE98002367413D00777B8E /* LoginViewController.swift in Sources */,
 				81CD3CAE23670DDA00B4E8D5 /* UserViewController.swift in Sources */,
 				81CD3CB223670F0C00B4E8D5 /* UserTableViewCell.swift in Sources */,
@@ -651,6 +666,7 @@
 				3B1A8AF02369918400B49498 /* LoginResponses.swift in Sources */,
 				81CD3CB8236711D200B4E8D5 /* ActivitesViewController.swift in Sources */,
 				3B3A52E623678F9E0018FA82 /* ImageCollectionViewCell.swift in Sources */,
+				81921A8D236F244C00BD1765 /* CenterTabBar.swift in Sources */,
 				81387DB923684EF900B172DB /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

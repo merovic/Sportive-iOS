@@ -75,8 +75,10 @@ class LoginViewController: UIViewController,NVActivityIndicatorViewable {
                                 print(json)
                                 let type : String = json[0]["type"].string!
                                 
-                                if type == "user" || type == "center" || type == "trainer" {
-                                self.performSegue(withIdentifier: "goToHome", sender: self)
+                               if type == "user" ||  type == "trainer" {
+                                self.performSegue(withIdentifier: "GoToUer", sender: self)
+                                } else if type == "center" {
+                                    self.performSegue(withIdentifier: "goToHome", sender: self)
                                 }
                             
                             } catch let parseError as NSError {
@@ -129,7 +131,7 @@ class LoginViewController: UIViewController,NVActivityIndicatorViewable {
              loginResponses.facebook = json [0] ["facebook"].stringValue
              loginResponses.services = json [0] ["services"].stringValue
              loginResponses.website = json [0] ["website"].stringValue
-        
+            Centers.center = loginResponses
             
            } else {
               
@@ -163,13 +165,14 @@ class LoginViewController: UIViewController,NVActivityIndicatorViewable {
         
     }
     
-    
-    
-    
-    
-    
-    
-    
+   
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+          if segue.identifier == "goToHome" {
+              let vc = segue.destination as! CenterTabBar
+              vc.modalPresentationStyle = .fullScreen
+              
+          }
+      }
     
     
 }

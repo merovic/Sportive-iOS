@@ -71,14 +71,24 @@ class APIClient {
 
        }
     
-    
-    
-    
-    
-    static func getAllCenters(completion:@escaping (Result<[Centers],AFError>)->Void) {
-        performRequest(route: APIRouter.Select_all_center, completion: completion)
-        }
-    
+    static func getAllCenters(completion:@escaping (Result<[Center],AFError>)->Void) {
+           performRequest(route: APIRouter.Select_all_center, completion: completion)
+           }
+       
+       
+       static func getGames(id_center: Int, completion:@escaping (Result<[Game],AFError>)->Void) {
+        performRequest(route: APIRouter.Select_game(id_center: Centers.center!.id), completion: completion)
+       }
+       
+       static func editCenterData(desctiption: String, history: String, img_1: String, img_2: String, img_3: String, img_4: String, id: Int, completion:@escaping (Result<String,AFError>)->Void) {
+               performRequestSimple(route: APIRouter.Update_center(desctiption: desctiption, history: history, img_1: img_1, img_2: img_2, img_3: img_3, img_4: img_4, id: id), completion: completion)
 
+       }
+
+       static func editUserOrCenterData(name: String, password: String, phone: String, long: String, lat: String, images: String, desctiption: String, id: Int, completion:@escaping (Result<String,AFError>)->Void) {
+           
+           performRequestSimple(route: APIRouter.Update_user_or_center(name: name, password: password, phone: phone, long: long, lat: lat, images: images, desctiption: desctiption, id: id), completion: completion)
+
+       }
 }
 

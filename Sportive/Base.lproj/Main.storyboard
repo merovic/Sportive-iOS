@@ -95,6 +95,7 @@
                         <outlet property="passwordTF" destination="Hta-8L-95q" id="GxM-4V-UdX"/>
                         <outlet property="yourEmailTf" destination="TUd-dA-3V4" id="VOB-bD-PPd"/>
                         <segue destination="KuX-oI-GZA" kind="show" identifier="goToHome" id="nwa-dl-CdX"/>
+                        <segue destination="jNX-3J-jAw" kind="show" identifier="GoToUer" id="SM0-Kt-rqW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -195,14 +196,18 @@
                                                 </collectionViewFlowLayout>
                                                 <cells>
                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageCollectionViewCell" id="X59-Zr-GB1" customClass="ImageCollectionViewCell" customModule="Sportive" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="176" height="100"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="of2-Ct-uBB">
-                                                            <rect key="frame" x="0.0" y="0.0" width="176" height="100"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="6lt-mj-NBl">
-                                                                    <rect key="frame" x="8" y="8" width="160" height="84"/>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="6lt-mj-NBl">
+                                                                    <rect key="frame" x="8" y="8" width="134" height="134"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="150" id="kDO-zf-bJR"/>
+                                                                        <constraint firstAttribute="height" constant="150" id="wUV-01-oq3"/>
+                                                                    </constraints>
                                                                 </imageView>
                                                             </subviews>
                                                             <constraints>
@@ -212,7 +217,7 @@
                                                                 <constraint firstItem="6lt-mj-NBl" firstAttribute="top" secondItem="of2-Ct-uBB" secondAttribute="top" constant="8" id="hhO-Yb-bea"/>
                                                             </constraints>
                                                         </collectionViewCellContentView>
-                                                        <size key="customSize" width="176" height="100"/>
+                                                        <size key="customSize" width="150" height="150"/>
                                                         <connections>
                                                             <outlet property="imageView" destination="6lt-mj-NBl" id="zQs-cz-34n"/>
                                                         </connections>
@@ -376,10 +381,14 @@
                     </navigationItem>
                     <size key="freeformSize" width="414" height="1200"/>
                     <connections>
+                        <outlet property="Image" destination="Nax-jc-MY0" id="sm8-4y-UNE"/>
                         <outlet property="collectionView" destination="NlX-cI-iAf" id="6Hs-Ma-30H"/>
-                        <outlet property="descriptionTf" destination="hMM-1g-sWZ" id="Ig0-3L-ld4"/>
+                        <outlet property="descriptionTV" destination="faK-is-eFn" id="Unz-J2-fVw"/>
+                        <outlet property="email" destination="RiX-NH-6Fp" id="Qg3-fh-Zgr"/>
                         <outlet property="historyTf" destination="bGK-BT-Qh2" id="lA9-Kb-GLR"/>
                         <outlet property="mapView" destination="38j-co-FqJ" id="4JL-YW-OrG"/>
+                        <outlet property="nameLbl" destination="lEk-Xm-CK3" id="rds-Jq-lPq"/>
+                        <outlet property="phone" destination="Pgd-6G-nsf" id="0mg-4Y-skC"/>
                         <outlet property="tableView" destination="kGM-CT-mSA" id="8d9-Xp-0S8"/>
                     </connections>
                 </viewController>
@@ -482,10 +491,10 @@
             </objects>
             <point key="canvasLocation" x="-4696" y="413"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Center Tab Bar-->
         <scene sceneID="pqW-OK-J7V">
             <objects>
-                <tabBarController id="KuX-oI-GZA" sceneMemberID="viewController">
+                <tabBarController id="KuX-oI-GZA" customClass="CenterTabBar" customModule="Sportive" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="6XF-aq-OGB"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pd1-X6-OOD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -1033,13 +1042,13 @@
                     <navigationItem key="navigationItem" id="ynd-RT-BD6"/>
                     <size key="freeformSize" width="414" height="1000"/>
                     <connections>
+                        <outlet property="descriptionLbl" destination="URt-fr-2IW" id="qBZ-5t-82c"/>
                         <outlet property="emailTf" destination="pmX-DB-Ual" id="PTX-6d-u9a"/>
+                        <outlet property="historyLbl" destination="C9b-5Z-Zlg" id="kAY-uF-cfC"/>
                         <outlet property="mobileTf" destination="t95-JE-fhl" id="CPo-7G-gcT"/>
                         <outlet property="nameTf" destination="1vJ-hF-q3M" id="quL-Jg-Nr5"/>
                         <outlet property="passwordTf" destination="hNV-bj-PuP" id="eDY-nn-wSw"/>
                         <outlet property="profileImg" destination="nJK-HM-KGc" id="EBm-9m-RYh"/>
-                        <outlet property="profileLbl1" destination="URt-fr-2IW" id="dv0-so-r4e"/>
-                        <outlet property="profileLbl2" destination="C9b-5Z-Zlg" id="6T1-uy-P8n"/>
                         <outletCollection property="uploadedImages" destination="45T-Rc-Wm8" collectionClass="NSMutableArray" id="Sjf-hS-w3k"/>
                         <outletCollection property="uploadedImages" destination="9Xa-Qn-Pdt" collectionClass="NSMutableArray" id="OXh-OI-9TU"/>
                         <outletCollection property="uploadedImages" destination="srD-yR-ebT" collectionClass="NSMutableArray" id="blc-EZ-8vn"/>
@@ -1175,14 +1184,14 @@
             <objects>
                 <viewController id="DHA-dz-5ti" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5i1-kj-W6e">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1146"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FA9-Ie-dRy">
-                                <rect key="frame" x="0.0" y="88" width="414" height="1029"/>
+                                <rect key="frame" x="0.0" y="56" width="414" height="1007"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6z4-wN-lI3" userLabel="Description Tf">
-                                        <rect key="frame" x="0.0" y="11" width="414" height="1007"/>
+                                        <rect key="frame" x="0.0" y="11" width="414" height="985"/>
                                         <subviews>
                                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="rcR-rz-yVL">
                                                 <rect key="frame" x="0.0" y="8" width="414" height="56"/>
@@ -1195,7 +1204,7 @@
                                                 </constraints>
                                             </mapView>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kfC-iE-0tH">
-                                                <rect key="frame" x="20" y="414" width="374" height="562"/>
+                                                <rect key="frame" x="20" y="414" width="374" height="540"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="GameTableViewCell" id="pGU-78-NIv" customClass="GameTableViewCell" customModule="Sportive" customModuleProvider="target">
@@ -1286,11 +1295,11 @@
             <objects>
                 <viewController id="trF-II-134" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aaK-6t-CLu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fVf-5X-F8R">
-                                <rect key="frame" x="20" y="108" width="374" height="685"/>
+                                <rect key="frame" x="20" y="76" width="374" height="663"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="101" id="gWM-nV-stb">
@@ -1364,10 +1373,11 @@
             </objects>
             <point key="canvasLocation" x="-729" y="2579"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--User Tab Bar-->
         <scene sceneID="3BC-fj-0zE">
             <objects>
-                <tabBarController id="jNX-3J-jAw" sceneMemberID="viewController">
+                <tabBarController id="jNX-3J-jAw" customClass="UserTabBar" customModule="Sportive" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="4C6-fI-ahs"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qHC-NG-axq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1391,11 +1401,11 @@
             <objects>
                 <viewController id="ATd-he-bIi" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="M4P-Gr-MJS">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nG5-Ff-VOn">
-                                <rect key="frame" x="20" y="108" width="374" height="685"/>
+                                <rect key="frame" x="20" y="76" width="374" height="663"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="101" id="P4x-IK-fTv">
@@ -1488,7 +1498,7 @@
                     <tabBarItem key="tabBarItem" title="Item 1" id="9bS-JA-OBj"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5ZH-wc-eWN">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
@@ -1508,7 +1518,7 @@
                     <tabBarItem key="tabBarItem" title="Item" id="iQr-z8-ihs"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4ax-BK-CIr">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
@@ -1528,7 +1538,7 @@
                     <tabBarItem key="tabBarItem" title="Item 2" id="1EQ-vi-0Ao"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vkN-yh-bbk">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>

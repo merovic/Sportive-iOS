@@ -85,5 +85,7 @@ class PersonlInfoViewController: UIViewController , NVActivityIndicatorViewable 
     @IBAction func UploadImage(_ sender: UIButton) {
     }
     
+    @IBAction func Upload4Images(_ sender: UIButton) {
+    }
     
 }

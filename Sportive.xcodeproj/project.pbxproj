@@ -38,6 +38,7 @@
 		81921A8F236F245400BD1765 /* UserTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81921A8E236F245400BD1765 /* UserTabBar.swift */; };
 		81921A91236F246800BD1765 /* Centers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81921A90236F246800BD1765 /* Centers.swift */; };
 		81921A93236F27CB00BD1765 /* Center.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81921A92236F27CB00BD1765 /* Center.swift */; };
+		81921A95236F2D6F00BD1765 /* Upload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81921A94236F2D6F00BD1765 /* Upload.swift */; };
 		81A3A148236F169E0028709C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81A3A147236F169E0028709C /* GoogleService-Info.plist */; };
 		81CD3CAE23670DDA00B4E8D5 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CD3CAD23670DDA00B4E8D5 /* UserViewController.swift */; };
 		81CD3CB223670F0C00B4E8D5 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CD3CB123670F0C00B4E8D5 /* UserTableViewCell.swift */; };
@@ -107,6 +108,7 @@
 		81921A8E236F245400BD1765 /* UserTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTabBar.swift; sourceTree = "<group>"; };
 		81921A90236F246800BD1765 /* Centers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Centers.swift; sourceTree = "<group>"; };
 		81921A92236F27CB00BD1765 /* Center.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Center.swift; sourceTree = "<group>"; };
+		81921A94236F2D6F00BD1765 /* Upload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Upload.swift; sourceTree = "<group>"; };
 		81A3A147236F169E0028709C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		81CD3CAD23670DDA00B4E8D5 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		81CD3CB123670F0C00B4E8D5 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				181B5F352366E4F7002E7246 /* Alert.swift */,
 				181B5F342366E4F7002E7246 /* CardView.swift */,
 				181B5F332366E4F7002E7246 /* DesignableUITextField.swift */,
+				81921A94236F2D6F00BD1765 /* Upload.swift */,
 			);
 			path = Utitlites;
 			sourceTree = "<group>";
@@ -645,6 +648,7 @@
 				181B5F362366E4F7002E7246 /* DesignableUITextField.swift in Sources */,
 				81921A93236F27CB00BD1765 /* Center.swift in Sources */,
 				81921A8B236F244400BD1765 /* Game.swift in Sources */,
+				81921A95236F2D6F00BD1765 /* Upload.swift in Sources */,
 				81387DBB23684EF900B172DB /* APIClient.swift in Sources */,
 				81758CFC23685F0F004CD357 /* LoginResponse.swift in Sources */,
 				18F093612341F338000B29CA /* ViewController.swift in Sources */,

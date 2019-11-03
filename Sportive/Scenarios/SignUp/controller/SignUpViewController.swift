@@ -100,6 +100,7 @@ class SignUpViewController: UIViewController   {
                 APIClient.Register(name: name, email: email, password: password, phone: mobil, type: self.type, long: self.longLocation, lat: self.latLocation, images: "", famous: "", desctiption: "", history: "", img_1: "", img_2: "", img_3: "", img_4: "",completion: { result in
                                switch result {
                                case .success(let response):
+                                
                                    DispatchQueue.main.async {
                                        print(response)
                                     self.dismiss(animated: true, completion: nil)

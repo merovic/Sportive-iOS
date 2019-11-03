@@ -80,6 +80,7 @@ PODS:
   - SDWebImage (5.2.5):
     - SDWebImage/Core (= 5.2.5)
   - SDWebImage/Core (5.2.5)
+  - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
   - Alamofire (~> 5.0.0-beta.5)
@@ -89,6 +90,7 @@ DEPENDENCIES:
   - IQKeyboardManagerSwift (= 6.0.4)
   - NVActivityIndicatorView
   - SDWebImage (~> 5.0)
+  - SwiftyJSON
 
 SPEC REPOS:
   trunk:
@@ -111,6 +113,7 @@ SPEC REPOS:
     - nanopb
     - NVActivityIndicatorView
     - SDWebImage
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: ca8c0de6906873be89d6deec5c8de279e00bf872
@@ -132,7 +135,8 @@ SPEC CHECKSUMS:
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   NVActivityIndicatorView: d24b7ebcf80af5dcd994adb650e2b6c93379270f
   SDWebImage: 4eabf2fa6695c95c47724214417a9c036c965e4a
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 0a40e31f72eca6807b9998359419373f1d95e23d
+PODFILE CHECKSUM: 2f2242fdee12c60aab61890007978f8fac9ce63d
 
 COCOAPODS: 1.8.4

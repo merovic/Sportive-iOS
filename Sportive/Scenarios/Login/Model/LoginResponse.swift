@@ -26,5 +26,4 @@ struct LoginResponse: Codable {
         case facebook, services, website
     }
 }
-//
-//typealias LoginResponse = [LoginResponseElement]
+

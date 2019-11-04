@@ -32,5 +32,7 @@ class UserProfileViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBAction func profileButtonPressed(_ sender: Any) {
+    }
+    
 }

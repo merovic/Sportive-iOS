@@ -1,15 +1,19 @@
 //
-//  TableViewCell.swift
+//  CentersTableViewCell.swift
 //  Sportive
 //
-//  Created by Ali Mohamed on 10/28/19.
+//  Created by Ali Mohamed on 11/4/19.
 //  Copyright © 2019 amirahmed. All rights reserved.
 //
 
 import UIKit
 
-class TableViewCell: UITableViewCell {
+class CentersTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var centerImage: UIImageView!
+    @IBOutlet weak var centerName: UILabel!
+    @IBOutlet weak var centerPhone: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,5 +24,5 @@ class TableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-// dummy class
+
 }

@@ -7,4 +7,7 @@ import Foundation
 
 class Centers {
     static var center: LoginResponses?
+    
+    static var image: String?
+    static var img1, img2, img3, img4: String?
 }

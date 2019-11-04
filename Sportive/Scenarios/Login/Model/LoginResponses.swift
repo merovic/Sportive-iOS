@@ -29,8 +29,5 @@ class LoginResponses {
     var facebook : String = " "
     var services  : String = " "
     var website : String = " "
-    
-    
-
 }
     

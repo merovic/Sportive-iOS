@@ -15,7 +15,6 @@ class PersonlInfoViewController: UIViewController , NVActivityIndicatorViewable 
     
     //MARK - IBOutlet
 
-    
     @IBOutlet weak var profileImg: UIImageView!
     @IBOutlet weak var nameTf: UITextField!
     @IBOutlet weak var emailTf: UITextField!
@@ -26,7 +25,6 @@ class PersonlInfoViewController: UIViewController , NVActivityIndicatorViewable 
     @IBOutlet var uploadedImages: [UIImageView]!
     
     var profileImageUrl: String?
-    var imagesUrl = [URL]()
     let imagePicker = UIImagePickerController()
     var imagePickedNumber = 0
     var image1: String?
@@ -37,14 +35,16 @@ class PersonlInfoViewController: UIViewController , NVActivityIndicatorViewable 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        imagePicker.delegate = self
         update()
         
         }
     
     
-    
+    //MARK: - Update View From Model
     func update(){
+        
+        imagePicker.delegate = self
+        
         if let user = Centers.center {
             nameTf.text = user.name
             passwordTf.text = user.password
@@ -57,13 +57,11 @@ class PersonlInfoViewController: UIViewController , NVActivityIndicatorViewable 
             uploadedImages[3].sd_setImage(with: URL(string: user.img_4), placeholderImage: UIImage(named: "user"))
             
         }
-        
-        
-        
-        
     }
 
    //MARK - IBAction
+    
+    //MARK: - Personal Section
 
     @IBAction func editBtnPressed(_ sender: UIButton) {
     
@@ -106,12 +104,6 @@ class PersonlInfoViewController: UIViewController , NVActivityIndicatorViewable 
                 
             }
         }
-        
-        
-        
-    }
-    
-    @IBAction func addGameBtnPressed(_ sender: UIButton) {
     }
     
     @IBAction func UploadImage(_ sender: UIButton) {
@@ -121,13 +113,23 @@ class PersonlInfoViewController: UIViewController , NVActivityIndicatorViewable 
         
     }
     
+    
+    //MARK: - Profile Section
+    
+    //MARK: - Upload the 4 Images for personal Section
+    
     @IBAction func Upload4Images(_ sender: UIButton) {
         imagePickedNumber = 2
         imagePicker.sourceType = .photoLibrary
         present(imagePicker, animated: true, completion: nil)
     }
     
+    @IBAction func addGameBtnPressed(_ sender: UIButton) {
+      }
 }
+
+//MARK: - ImagePicker Set Up and Image Upload
+
 extension PersonlInfoViewController: UIImagePickerControllerDelegate {
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -136,11 +138,10 @@ extension PersonlInfoViewController: UIImagePickerControllerDelegate {
         if imagePickedNumber == 1 {
            profileImg.image = image
             profileImageUrl = FirebaseUploader.uploadToFirebase(viewController: self, imagePicker: imagePicker, didFinishPickingMediaWithInfo: info, butNumber: imagePickedNumber)
+            
         } else if imagePickedNumber == 2 {
             uploadedImages[0].image = image
             image1 = FirebaseUploader.uploadToFirebase(viewController: self, imagePicker: imagePicker, didFinishPickingMediaWithInfo: info, butNumber: imagePickedNumber)
-            
-            image1 = Centers.image
         }
         
     }

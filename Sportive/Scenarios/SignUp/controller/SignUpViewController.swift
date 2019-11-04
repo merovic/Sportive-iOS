@@ -14,7 +14,6 @@ import NVActivityIndicatorView
 class SignUpViewController: UIViewController   {
  
     var type : String = ""
-    
     var latLocation : String = ""
     var longLocation : String = ""
     
@@ -24,21 +23,16 @@ class SignUpViewController: UIViewController   {
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var mobileTF: UITextField!
     @IBOutlet weak var locationTF: UITextField!
-    
-    
     @IBOutlet weak var centerCk: BEMCheckBox!
-    
     @IBOutlet weak var userCk: BEMCheckBox!
-    
     @IBOutlet weak var tarinerCk: BEMCheckBox!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
 
-        
     }
     
+    //MARK: - Choose Type of user
     @IBAction func checkBoxChange(_ sender: BEMCheckBox) {
         let check = sender.tag
            if check == 1 {
@@ -61,17 +55,12 @@ class SignUpViewController: UIViewController   {
     }
 
     
-
-    
-    
-    
     @IBAction func locationAction(_ sender: UITextField) {
        performSegue(withIdentifier: "goTomap", sender: self)
         
     }
     
     
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goTomap" {
             let vc = segue.destination as! MapKitViewController
@@ -79,20 +68,17 @@ class SignUpViewController: UIViewController   {
         }
     }
     
-   
-
     @IBAction func signUpButtonPressed(_ sender: UIButton) {
         register()
-        
     }
+    
     @IBAction func logInButtonPressed(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
         
     }
     
     
-    
-    
+    //MARK: - Regester
     func register (){
            DispatchQueue.main.async {
                // Test Login request
@@ -119,11 +105,6 @@ class SignUpViewController: UIViewController   {
                
            }
        }
-    
-    
-    
-
-    
 }
 
 
@@ -132,8 +113,5 @@ extension SignUpViewController :  CanReceive {
         latLocation = lat
         longLocation = long
     }
-    
-   
-    
     
 }

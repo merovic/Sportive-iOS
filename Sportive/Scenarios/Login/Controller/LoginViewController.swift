@@ -23,39 +23,19 @@ class LoginViewController: UIViewController,NVActivityIndicatorViewable {
     override func viewDidLoad() {
         super.viewDidLoad()
         passwordTF.isSecureTextEntry = true
-        // Do any additional setup after loading the view.
     }
     
     //MARK - IBAction
-
- 
-    
-
     @IBAction func logInButtonPressed(_ sender: UIButton) {
         login ()
     }
     @IBAction func signUpButtonPressed(_ sender: UIButton) {
     }
     @IBAction func forgetPasswordPressed(_ sender: UIButton) {
-        
-        DispatchQueue.main.async {
-            APIClient.getAllCenters { (resulr) in
-                switch resulr{
-                    case .success(let response):
-                            DispatchQueue.main.async {
-                             //   user.append(response[0].)
-                                print(response)
-                            }
-                        case .failure(let error):
-                            print(error.localizedDescription)
-
-                        }
-                    }
-            
-        }
-        
     }
    
+
+//MARK: - Log In And Get Data From API
     func login (){
         self.startAnimating()
         DispatchQueue.main.async {
@@ -68,8 +48,6 @@ class LoginViewController: UIViewController,NVActivityIndicatorViewable {
                         DispatchQueue.main.async {
                             
                             do {
-                               // let decoder = JSONDecoder()
-                                
                                     let json = try JSON(data: Data(response.utf8))
                                 self.updateLoginData(json: json)
                                 print(json)
@@ -79,12 +57,12 @@ class LoginViewController: UIViewController,NVActivityIndicatorViewable {
                                 self.performSegue(withIdentifier: "GoToUer", sender: self)
                                 } else if type == "center" {
                                     self.performSegue(withIdentifier: "goToHome", sender: self)
+                                    self.stopAnimating()
                                 }
                             
                             } catch let parseError as NSError {
                                 print("JSON Error \(parseError.localizedDescription)")
                             }
-                            
                             
                             self.stopAnimating()
                         }
@@ -93,13 +71,11 @@ class LoginViewController: UIViewController,NVActivityIndicatorViewable {
                     self.stopAnimating()
 
                     }
-                    })
+                })
                 
 
             }else{
-                
                 self.stopAnimating()
- 
             }
             
         }
@@ -108,7 +84,7 @@ class LoginViewController: UIViewController,NVActivityIndicatorViewable {
     //Write the updateLoginData method here:
        func updateLoginData(json : JSON)  {
            
-           if   let typeResult = json [0] ["type"].string {
+        if   json [0] ["type"].string != nil {
             
              loginResponses.id = json [0] ["id"].intValue
              loginResponses.name = json [0] ["name"].stringValue
@@ -131,41 +107,15 @@ class LoginViewController: UIViewController,NVActivityIndicatorViewable {
              loginResponses.facebook = json [0] ["facebook"].stringValue
              loginResponses.services = json [0] ["services"].stringValue
              loginResponses.website = json [0] ["website"].stringValue
-            Centers.center = loginResponses
+            
+             Centers.center = loginResponses
             
            } else {
               
            }
-           
-           
-           
        }
     
-    
-    
-    
-    
-    
-    
-    func rongVaildateTextField(textField : UITextField)  {
-        textField.layer.borderWidth = 4
-        textField.layer.borderColor = #colorLiteral(red: 0.5807225108, green: 0.066734083, blue: 0, alpha: 1)
-    }
-    
-    func successVaildateTextField(textField : UITextField)  {
-        textField.layer.borderWidth = 4
-        textField.layer.borderColor = #colorLiteral(red: 0, green: 0.5628422499, blue: 0.3188166618, alpha: 1)
-    }
-    
-    
-    func vaildateEmail(emailStr : String) -> Bool {
-        let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-        let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegex)
-        return emailPred.evaluate(with: emailStr)
-        
-    }
-    
-   
+   //MARK: - Prepare For Segue and Present it as fullscreen
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
           if segue.identifier == "goToHome" {
               let vc = segue.destination as! CenterTabBar
@@ -173,7 +123,6 @@ class LoginViewController: UIViewController,NVActivityIndicatorViewable {
               
           }
       }
-    
     
 }
 

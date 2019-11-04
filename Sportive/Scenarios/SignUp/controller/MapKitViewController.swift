@@ -10,25 +10,25 @@ import UIKit
 import MapKit
 import CoreLocation
 
-
 //create protcole
 protocol CanReceive {
     //create fun
     func dataReceived(lat : String , long : String)
     
 }
-class MapKitViewController: UIViewController , CLLocationManagerDelegate{
 
+class MapKitViewController: UIViewController{
+
+   
+    @IBOutlet weak var mapView: MKMapView!
+    
     var lat:String = ""
     var long:String = ""
     var delegate : CanReceive?
-   
-    @IBOutlet weak var mapView: MKMapView!
     let locationManger = CLLocationManager()
     let regionInMeters: Double = 1000000
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         addPinToMap()
     }
@@ -38,7 +38,7 @@ class MapKitViewController: UIViewController , CLLocationManagerDelegate{
     //-------------------------------------
     
     
-    // buttons on storyboard
+    //MARK: - IBAction
     
     @IBAction func getLocation(_ sender: UIButton) {
         
@@ -47,47 +47,42 @@ class MapKitViewController: UIViewController , CLLocationManagerDelegate{
         
     }
     
-    
-    
     @IBAction func doneChoosingLocation(_ sender:
         UIButton) {
+        
         delegate?.dataReceived(lat: lat, long: long)
         dismiss(animated: true, completion: nil)
         
-        
     }
-    
     
     
     //----------------------------------
     
     
-    // gestrue recognizer and adding pins to mapview
+    //MARK: - Add Gesture Recognizer
     
     func addPinToMap(){
-        let tapGesture = UILongPressGestureRecognizer(target: self, action: #selector(longTap))
+        let tapGesture = UILongPressGestureRecognizer(target: self, action: #selector(userTappedMAp))
         tapGesture.minimumPressDuration = 0.5
         mapView.addGestureRecognizer(tapGesture)
     }
     
-    @objc func longTap(sender: UIGestureRecognizer){
-       
+    //TODO: - add pin to the map wherever user tap
+    @objc func userTappedMAp(sender: UIGestureRecognizer){
         if sender.state == .began {
             let locationInView = sender.location(in: mapView)
             let locationOnMap = mapView.convert(locationInView, toCoordinateFrom: mapView)
-            lat = String(locationOnMap.latitude)
-            long = String(locationOnMap.longitude)
-            
-            print(lat,long)
             deleteAnnotation()
             addAnnotation(location: locationOnMap)
-            
         }
     }
+    
+    //MARK :- Remove All Annotaions (Pins) From Map
     func deleteAnnotation() {
         self.mapView.removeAnnotations(mapView.annotations)
     }
-
+    
+    //TODO :- add mark for location
     func addAnnotation(location: CLLocationCoordinate2D){
         
             let annotation = MKPointAnnotation()
@@ -96,28 +91,25 @@ class MapKitViewController: UIViewController , CLLocationManagerDelegate{
     }
     
     
-    
     //------------------------------------
     
-    
-    
-    
+    //MARK :- Set Up Core Location
     func CLLocationSetUp(){
-        
         locationManger.delegate = self
         locationManger.desiredAccuracy = kCLLocationAccuracyBest
-        
     }
     
+   //MARK :- Chick If Location Is Enabled
     func checkLocationIsEnabled(){
         if CLLocationManager.locationServicesEnabled() {
-           CLLocationSetUp()
+            CLLocationSetUp()
             checkLocationAuthorization()
         } else {
             
         }
     }
     
+    //MARK :- Get user current Location
     func centerViewOnUserLocation() {
         if let location = locationManger.location?.coordinate {
             let region = MKCoordinateRegion.init(center: location, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
@@ -125,12 +117,12 @@ class MapKitViewController: UIViewController , CLLocationManagerDelegate{
         }
     }
 
+    //MARK :- Check for user authorization status
     func checkLocationAuthorization()  {
         switch CLLocationManager.authorizationStatus() {
         case .authorizedAlways:
             break
         case .authorizedWhenInUse:
-//            mapView.showsUserLocation = true
             locationManger.startUpdatingLocation()
         case .denied:
             break
@@ -141,20 +133,25 @@ class MapKitViewController: UIViewController , CLLocationManagerDelegate{
         }
     }
 
+   
     
-    
-    // corelocation methodes
+}
+
+//MARK :- Core Location Methodes
+extension MapKitViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        
-        locationManger.stopUpdatingLocation()
-         guard let location = locations.last else { return }
-               let region = MKCoordinateRegion.init(center: location.coordinate, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
-        lat = String(location.coordinate.latitude)
-        long = String(location.coordinate.longitude)
+           
+           locationManger.stopUpdatingLocation()
+            guard let location = locations.last else { return }
+                  let region = MKCoordinateRegion.init(center: location.coordinate, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
+           lat = String(location.coordinate.latitude)
+           long = String(location.coordinate.longitude)
+          
+                  mapView.setRegion(region, animated: true)
+       }
        
-               mapView.setRegion(region, animated: true)
-    }
+    
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         checkLocationAuthorization()
     }

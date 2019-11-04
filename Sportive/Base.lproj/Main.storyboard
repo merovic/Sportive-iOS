@@ -814,7 +814,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gbc-ug-QzV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3871" y="413"/>
+            <point key="canvasLocation" x="-3871" y="387"/>
         </scene>
         <!--Personl Info View Controller-->
         <scene sceneID="h1N-in-ApX">
@@ -1314,7 +1314,7 @@
         <!--Trainer-->
         <scene sceneID="78f-67-Bla">
             <objects>
-                <viewController id="trF-II-134" sceneMemberID="viewController">
+                <viewController id="trF-II-134" customClass="TrainerViewController" customModule="Sportive" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aaK-6t-CLu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1323,7 +1323,7 @@
                                 <rect key="frame" x="20" y="76" width="374" height="663"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="101" id="gWM-nV-stb">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TrainerTableViewCell" rowHeight="101" id="gWM-nV-stb" customClass="TrainerTableViewCell" customModule="Sportive" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="374" height="101"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gWM-nV-stb" id="RC5-eT-srp">
@@ -1375,8 +1375,17 @@
                                                 <constraint firstItem="5DI-qF-17Z" firstAttribute="top" secondItem="RC5-eT-srp" secondAttribute="top" constant="8" id="zj8-6B-g8U"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="emailLbl" destination="I3b-Y9-b7v" id="NJ6-Ex-I8Y"/>
+                                            <outlet property="nameLbl" destination="msh-SQ-ulM" id="pBn-Zx-f7D"/>
+                                            <outlet property="profileImage" destination="ayD-t4-nRB" id="8S8-hb-fay"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="trF-II-134" id="oSf-Eg-Kax"/>
+                                    <outlet property="delegate" destination="trF-II-134" id="OEI-JV-E7C"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -1389,6 +1398,9 @@
                         <viewLayoutGuide key="safeArea" id="tPo-cH-9ZJ"/>
                     </view>
                     <navigationItem key="navigationItem" title="Trainer" id="SuH-Ep-xCV"/>
+                    <connections>
+                        <outlet property="allTrainerTableView" destination="fVf-5X-F8R" id="3Of-JH-sDH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Wv-K3-8ba" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1420,7 +1432,7 @@
         <!--Activites-->
         <scene sceneID="6Jj-8G-zaj">
             <objects>
-                <viewController id="ATd-he-bIi" sceneMemberID="viewController">
+                <viewController id="ATd-he-bIi" customClass="ActivitesUserOrTrainerViewController" customModule="Sportive" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="M4P-Gr-MJS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1429,7 +1441,7 @@
                                 <rect key="frame" x="20" y="76" width="374" height="663"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="101" id="P4x-IK-fTv">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ActivitiesUserOrTrainerTableViewCell" rowHeight="101" id="P4x-IK-fTv" customClass="ActivitiesUserOrTrainerTableViewCell" customModule="Sportive" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="374" height="101"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="P4x-IK-fTv" id="l9F-Qr-9AC">
@@ -1493,8 +1505,18 @@
                                                 <constraint firstAttribute="trailing" secondItem="N8J-G4-Nb7" secondAttribute="trailing" constant="8" id="puO-jh-9BT"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="emailLbl" destination="yWJ-GD-N6Y" id="DuL-Xj-TxL"/>
+                                            <outlet property="massageLbl" destination="ZQg-Nu-saq" id="7Mt-wu-Ttv"/>
+                                            <outlet property="profileImage" destination="zlB-63-wkP" id="Fvs-bZ-2g3"/>
+                                            <outlet property="typeLbl" destination="UqW-yU-ZqK" id="nXD-yR-P1b"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ATd-he-bIi" id="gKW-AQ-4Y5"/>
+                                    <outlet property="delegate" destination="ATd-he-bIi" id="WMZ-4E-siZ"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -1507,6 +1529,9 @@
                         <viewLayoutGuide key="safeArea" id="ySF-wx-6oY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Activites" id="jfh-yi-BDg"/>
+                    <connections>
+                        <outlet property="activityTableView" destination="nG5-Ff-VOn" id="KeS-UR-t7c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9a7-dr-jmI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

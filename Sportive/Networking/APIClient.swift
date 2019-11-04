@@ -90,5 +90,10 @@ class APIClient {
            performRequestSimple(route: APIRouter.Update_user_or_center(name: name, password: password, phone: phone, long: long, lat: lat, images: images, desctiption: desctiption, id: id), completion: completion)
 
        }
+    
+    
+    static func getAllActive(id : Int , completion:@escaping (Result<[AllActive],AFError>)->Void) {
+       performRequest(route: APIRouter.Select_All_Activities(id: id), completion: completion)
+       }
 }
 

@@ -42,6 +42,7 @@ class ProfileViewController: UIViewController {
         
         updateViewFromData()
         
+        
     }
     
     func updateViewFromData(){
@@ -80,7 +81,6 @@ class ProfileViewController: UIViewController {
     
     func getGames(){
         if let Id = user?.id{
-            
             APIClient.getGames(id_center: Id) { (Result) in
                 switch Result {
                 case .success(let response):

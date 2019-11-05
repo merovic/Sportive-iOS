@@ -44,7 +44,7 @@ class PersonlInfoViewController: UIViewController , NVActivityIndicatorViewable 
     func update(){
         
         imagePicker.delegate = self
-        
+        ProfilePic.roundedPic(imageView: profileImg)
         if let user = Centers.center {
             nameTf.text = user.name
             passwordTf.text = user.password

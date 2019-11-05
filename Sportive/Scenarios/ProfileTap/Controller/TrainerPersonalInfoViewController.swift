@@ -29,12 +29,12 @@ class TrainerPersonalInfoViewController: UIViewController , UIImagePickerControl
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        imagePicker.delegate = self
         updateView()
     }
 
     func updateView(){
-        
+        imagePicker.delegate = self
+        ProfilePic.roundedPic(imageView: profileImage)
         if let user = Centers.center {
             nameLbl.text = user.name
             passwordLbl.text = user.password

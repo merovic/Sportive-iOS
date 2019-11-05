@@ -20,8 +20,8 @@ class PersonlInfoViewController: UIViewController , NVActivityIndicatorViewable 
     @IBOutlet weak var emailTf: UITextField!
     @IBOutlet weak var passwordTf: UITextField!
     @IBOutlet weak var mobileTf: UITextField!
-    @IBOutlet weak var descriptionLbl: UILabel!
-    @IBOutlet weak var historyLbl: UILabel!
+    @IBOutlet weak var descriptionLbl: UITextView!
+    @IBOutlet weak var historyLbl: UITextView!
     @IBOutlet var uploadedImages: [UIImageView]!
     
     var profileImageUrl: String?

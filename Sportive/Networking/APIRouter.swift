@@ -20,7 +20,7 @@ enum APIRouter: URLRequestConvertible {
     case Select_all_center
     case select_all_center_famous
     case SearchAllCenteres(text : String)
-    case Select_game (id_center : Int)
+    case select_game (id_center : Int)
     case Join_Center (id_center : Int)
     case Select_join_iduser (id_user : Int)
     case Update_center (desctiption : String ,history : String ,
@@ -57,7 +57,7 @@ enum APIRouter: URLRequestConvertible {
                  return .get
         case .SearchAllCenteres:
              return .get
-        case .Select_game:
+        case .select_game:
              return .get
         case .Join_Center:
              return .get
@@ -97,7 +97,7 @@ enum APIRouter: URLRequestConvertible {
              return "/select_all_center_famous"
         case .SearchAllCenteres:
             return "/select_all_center_search"
-        case .Select_game:
+        case .select_game:
              return "/select_game"
         case .Join_Center:
              return "/select_join_center"
@@ -139,7 +139,7 @@ enum APIRouter: URLRequestConvertible {
             return nil
         case .SearchAllCenteres(let text):
             return [K.SearchAllCenteres.text : text]
-        case .Select_game(let id_center):
+        case .select_game(let id_center):
             return [K.Select_game.id_center : id_center]
         case .Join_Center(let id_center):
             return [K.Join_Center.id_center : id_center]

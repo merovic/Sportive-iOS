@@ -10,7 +10,7 @@ import UIKit
 
 class CenterProfileCellCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var imageUpload: UIImageView!
+    @IBOutlet weak var centerImage: UIImageView!
     
     
 }

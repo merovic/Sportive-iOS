@@ -31,6 +31,7 @@
 		3BA911862372F19400BBFEEE /* CenterProfileCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA911852372F19400BBFEEE /* CenterProfileCellCollectionViewCell.swift */; };
 		3BA911882372F24500BBFEEE /* CenteProfileGammingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA911872372F24500BBFEEE /* CenteProfileGammingTableViewCell.swift */; };
 		3BA9118A2372F60400BBFEEE /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA911892372F60400BBFEEE /* CommentTableViewCell.swift */; };
+		3BA9118C23730B1C00BBFEEE /* GammingAddedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA9118B23730B1C00BBFEEE /* GammingAddedViewController.swift */; };
 		3BCE98002367413D00777B8E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCE97FF2367413D00777B8E /* LoginViewController.swift */; };
 		3BCE98062367460A00777B8E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCE98052367460A00777B8E /* ProfileViewController.swift */; };
 		3BCE98092367464A00777B8E /* PersonlInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCE98082367464A00777B8E /* PersonlInfoViewController.swift */; };
@@ -109,6 +110,7 @@
 		3BA911852372F19400BBFEEE /* CenterProfileCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterProfileCellCollectionViewCell.swift; sourceTree = "<group>"; };
 		3BA911872372F24500BBFEEE /* CenteProfileGammingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenteProfileGammingTableViewCell.swift; sourceTree = "<group>"; };
 		3BA911892372F60400BBFEEE /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
+		3BA9118B23730B1C00BBFEEE /* GammingAddedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GammingAddedViewController.swift; sourceTree = "<group>"; };
 		3BCE97FF2367413D00777B8E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3BCE98052367460A00777B8E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		3BCE98082367464A00777B8E /* PersonlInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonlInfoViewController.swift; sourceTree = "<group>"; };
@@ -355,6 +357,7 @@
 				3BFC2A642370650600387540 /* UserPersonalInfoViewController.swift */,
 				3BFC2A662370651700387540 /* TrainerPersonalInfoViewController.swift */,
 				3BA911812372EBFE00BBFEEE /* DataOfCenterViewController.swift */,
+				3BA9118B23730B1C00BBFEEE /* GammingAddedViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -683,6 +686,7 @@
 				81921A93236F27CB00BD1765 /* Center.swift in Sources */,
 				3B18AE842370258E00879104 /* ActivitesUserOrTrainerViewController.swift in Sources */,
 				81921A8B236F244400BD1765 /* Game.swift in Sources */,
+				3BA9118C23730B1C00BBFEEE /* GammingAddedViewController.swift in Sources */,
 				81921A95236F2D6F00BD1765 /* Upload.swift in Sources */,
 				81387DBB23684EF900B172DB /* APIClient.swift in Sources */,
 				3B18AE862370262A00879104 /* ActivitiesUserOrTrainerTableViewCell.swift in Sources */,

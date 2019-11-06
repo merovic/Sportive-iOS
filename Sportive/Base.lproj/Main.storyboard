@@ -1326,10 +1326,10 @@
             </objects>
             <point key="canvasLocation" x="-3871" y="387"/>
         </scene>
-        <!--View Controller-->
+        <!--Gamming Added View Controller-->
         <scene sceneID="u2K-AB-Yqh">
             <objects>
-                <viewController id="cZJ-Yh-5GT" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GammingAddedViewController" id="cZJ-Yh-5GT" customClass="GammingAddedViewController" customModule="Sportive" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lu2-ne-5h0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1377,6 +1377,9 @@
                                             <constraint firstAttribute="height" constant="30" id="aZB-io-8Mb"/>
                                         </constraints>
                                         <state key="normal" title="ADD"/>
+                                        <connections>
+                                            <action selector="addBtnPressed:" destination="cZJ-Yh-5GT" eventType="touchUpInside" id="uiC-J7-PJd"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -1401,6 +1404,10 @@
                         <viewLayoutGuide key="safeArea" id="atX-WM-dQz"/>
                     </view>
                     <navigationItem key="navigationItem" id="AJU-or-SGG"/>
+                    <connections>
+                        <outlet property="nameOfGame" destination="sI2-5f-11X" id="cBV-VO-kqq"/>
+                        <outlet property="nameOfTrainer" destination="PyJ-SM-bFY" id="Jcq-Pz-mqh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZuS-vQ-wAD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

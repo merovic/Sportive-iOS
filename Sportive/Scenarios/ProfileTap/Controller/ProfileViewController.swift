@@ -37,9 +37,11 @@ class ProfileViewController: UIViewController {
         tableView.dataSource = self
         collectionView.delegate = self
         collectionView.dataSource = self
-        
+        print("----------------------")
+         getGames()
         user = Centers.center
         updateViewFromData()
+       
     }
     
     
@@ -84,7 +86,7 @@ class ProfileViewController: UIViewController {
                 case .success(let response):
                     DispatchQueue.main.async {
                         self.games = response
-                        print(response[0])
+                        print(response)
                     }
                 case .failure(let error):
                     DispatchQueue.main.async {

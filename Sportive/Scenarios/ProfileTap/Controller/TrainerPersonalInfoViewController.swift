@@ -21,7 +21,9 @@ class TrainerPersonalInfoViewController: UIViewController , UIImagePickerControl
     @IBOutlet weak var desLbl: UITextView!
     @IBOutlet weak var hisLbl: UITextView!
     @IBOutlet var imges: [UIImageView]!
+    @IBOutlet weak var editBtn: UIButton!
     
+    @IBOutlet weak var saveBtn: UIButton!
     let imagePicker = UIImagePickerController()
     var imagePickedNumber = 0
 
@@ -33,6 +35,10 @@ class TrainerPersonalInfoViewController: UIViewController , UIImagePickerControl
     }
 
     func updateView(){
+        ProfilePic.roundedButton1(button: editBtn)
+
+        ProfilePic.roundedButton1(button: saveBtn)
+
         imagePicker.delegate = self
         ProfilePic.roundedPic(imageView: profileImage)
         if let user = Centers.center {

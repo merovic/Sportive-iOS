@@ -11,7 +11,7 @@ import Foundation
 struct K {
     struct ProductionServer {
 
-        static let baseURL = "http://sportive.technowow.net/sportive.asmx"
+        static let baseURL = "http://sportive-app.com/sportive.asmx"
     }
     
     struct Forget_password_by_email {

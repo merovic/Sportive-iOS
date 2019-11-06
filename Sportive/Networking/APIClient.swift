@@ -95,5 +95,15 @@ class APIClient {
     static func getAllActive(id : Int , completion:@escaping (Result<[AllActive],AFError>)->Void) {
        performRequest(route: APIRouter.Select_All_Activities(id: id), completion: completion)
        }
+    
+    
+    static func getAllTariner(completion:@escaping (Result<[Tariner],AFError>)->Void) {
+             performRequest(route: APIRouter.select_all_trainer, completion: completion)
+             }
+   
+    
+    
+    
 }
+
 

@@ -20,9 +20,13 @@ class LoginViewController: UIViewController,NVActivityIndicatorViewable {
     @IBOutlet weak var yourEmailTf: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     
+    @IBOutlet weak var loginBtn: UIButton!
+    
+    @IBOutlet weak var signBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        passwordTF.isSecureTextEntry = true
+        ProfilePic.roundedButton2(button: signBtn)
+        ProfilePic.roundedButton2(button: loginBtn)
     }
     
     //MARK - IBAction
@@ -34,6 +38,10 @@ class LoginViewController: UIViewController,NVActivityIndicatorViewable {
     @IBAction func forgetPasswordPressed(_ sender: UIButton) {
     }
    
+    
+//MARK: - forgetPassword And Get Data From API
+    
+    
 
 //MARK: - Log In And Get Data From API
     func login (){
@@ -119,6 +127,10 @@ class LoginViewController: UIViewController,NVActivityIndicatorViewable {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
           if segue.identifier == "goToHome" {
               let vc = segue.destination as! CenterTabBar
+              vc.modalPresentationStyle = .fullScreen
+              
+          } else if segue.identifier == "GoToUer" {
+              let vc = segue.destination as! UserTabBar
               vc.modalPresentationStyle = .fullScreen
               
           }

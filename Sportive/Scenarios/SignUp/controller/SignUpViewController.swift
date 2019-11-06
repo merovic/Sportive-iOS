@@ -17,6 +17,7 @@ class SignUpViewController: UIViewController   {
     var latLocation : String = ""
     var longLocation : String = ""
     
+    @IBOutlet weak var sigbtn: UIButton!
     
     @IBOutlet weak var nameTF: UITextField!
     @IBOutlet weak var emailTF: UITextField!
@@ -29,7 +30,7 @@ class SignUpViewController: UIViewController   {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        ProfilePic.roundedButton2(button: sigbtn)
     }
     
     //MARK: - Choose Type of user

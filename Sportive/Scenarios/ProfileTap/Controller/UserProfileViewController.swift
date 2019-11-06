@@ -98,4 +98,5 @@ extension UserProfileViewController: UITableViewDataSource , UITableViewDelegate
         }
         return UITableViewCell()
     }
+    
 }

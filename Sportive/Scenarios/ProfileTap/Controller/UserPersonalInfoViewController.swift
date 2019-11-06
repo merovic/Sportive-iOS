@@ -17,6 +17,7 @@ class UserPersonalInfoViewController: UIViewController , NVActivityIndicatorView
     @IBOutlet weak var passwordTf: UITextField!
     @IBOutlet weak var MobileTf: UITextField!
     
+    @IBOutlet weak var editBtn: UIButton!
     let imagePicker = UIImagePickerController()
     var imgNumber = 0
     override func viewDidLoad() {
@@ -26,7 +27,7 @@ class UserPersonalInfoViewController: UIViewController , NVActivityIndicatorView
     
     func updateView(){
         ProfilePic.roundedPic(imageView: profileImage)
-        
+        ProfilePic.roundedButton1(button: editBtn)
         if let user = Centers.center {
             
             nameTf.text = user.name

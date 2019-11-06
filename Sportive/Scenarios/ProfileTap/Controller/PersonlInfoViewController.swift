@@ -24,6 +24,9 @@ class PersonlInfoViewController: UIViewController , NVActivityIndicatorViewable 
     @IBOutlet weak var historyLbl: UITextView!
     @IBOutlet var uploadedImages: [UIImageView]!
     
+    @IBOutlet weak var addBtn: UIButton!
+    @IBOutlet weak var saveBtn: UIButton!
+    @IBOutlet weak var editBtn: UIButton!
     var profileImageUrl: String?
     let imagePicker = UIImagePickerController()
     var imagePickedNumber = 0
@@ -45,6 +48,11 @@ class PersonlInfoViewController: UIViewController , NVActivityIndicatorViewable 
         
         imagePicker.delegate = self
         ProfilePic.roundedPic(imageView: profileImg)
+        ProfilePic.roundedButton1(button: editBtn)
+        ProfilePic.roundedButton1(button: saveBtn)
+        ProfilePic.roundedButton2(button: addBtn)
+
+
         if let user = Centers.center {
             nameTf.text = user.name
             passwordTf.text = user.password

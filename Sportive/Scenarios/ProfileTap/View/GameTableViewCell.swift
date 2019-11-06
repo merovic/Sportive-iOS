@@ -14,7 +14,6 @@ class GameTableViewCell: UITableViewCell {
     //MARK - IBOutlet
 
     @IBOutlet weak var gameNameLbl: UILabel!
-    
     @IBOutlet weak var trainerLbl: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()

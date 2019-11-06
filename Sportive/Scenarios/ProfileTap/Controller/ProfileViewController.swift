@@ -38,10 +38,9 @@ class ProfileViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         print("----------------------")
-         getGames()
         user = Centers.center
         updateViewFromData()
-       
+       getGames()
     }
     
     
@@ -84,10 +83,14 @@ class ProfileViewController: UIViewController {
             APIClient.getGames(id_center: Id) { (Result) in
                 switch Result {
                 case .success(let response):
-                    DispatchQueue.main.async {
-                        self.games = response
-                        print(response)
-                    }
+                  DispatchQueue.main.async {
+                       print(response)
+                    self.games = response
+                    self.tableView.reloadData()
+                    
+                   }
+                    
+                    
                 case .failure(let error):
                     DispatchQueue.main.async {
                         print(error.localizedDescription)
@@ -114,16 +117,18 @@ extension ProfileViewController : UITableViewDataSource , UITableViewDelegate{
     
     //TODO: Declare cellForRowAtIndexPath here:
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "", for: indexPath) as! GameTableViewCell
-        
-        cell.gameNameLbl.text = games?[indexPath.row].nameGame
-        cell.trainerLbl.text = games?[indexPath.row].coach
-        return cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "GameTableViewCell", for: indexPath) as! GameTableViewCell
+            cell.gameNameLbl.text = games?[indexPath.row].nameGame
+            cell.trainerLbl.text = games?[indexPath.row].coach
+            
+            return cell
+        }
     }
     
     
-}
+
 
 
 

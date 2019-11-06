@@ -77,7 +77,7 @@ class APIClient {
        
        
        static func getGames(id_center: Int, completion:@escaping (Result<[Game],AFError>)->Void) {
-        performRequest(route: APIRouter.Select_game(id_center: Centers.center!.id), completion: completion)
+        performRequest(route: APIRouter.select_game(id_center: Centers.center!.id), completion: completion)
        }
        
        static func editCenterData(desctiption: String, history: String, img_1: String, img_2: String, img_3: String, img_4: String, id: Int, completion:@escaping (Result<String,AFError>)->Void) {

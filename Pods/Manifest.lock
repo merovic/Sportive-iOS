@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (5.0.0-rc.3)
   - BEMCheckBox (1.4.1)
+  - Cosmos (20.0.1)
   - Firebase/Core (6.11.0):
     - Firebase/CoreOnly
     - FirebaseAnalytics (= 6.1.3)
@@ -85,6 +86,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 5.0.0-beta.5)
   - BEMCheckBox
+  - Cosmos
   - Firebase/Core
   - Firebase/Storage
   - IQKeyboardManagerSwift (= 6.0.4)
@@ -96,6 +98,7 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - BEMCheckBox
+    - Cosmos
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuthInterop
@@ -118,6 +121,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: ca8c0de6906873be89d6deec5c8de279e00bf872
   BEMCheckBox: 5ba6e37ade3d3657b36caecc35c8b75c6c2b1a4e
+  Cosmos: b47fddf2102bb48580cd3025d9ce0a5c658a65da
   Firebase: bc9cfc7a96c73268656d5aaab453ff1b4b530e0e
   FirebaseAnalytics: 0e3ecff2c5d86070f7d4325e21f1edabfbd558dc
   FirebaseAuthInterop: 0ffa57668be100582bb7643d4fcb7615496c41fc
@@ -137,6 +141,6 @@ SPEC CHECKSUMS:
   SDWebImage: 4eabf2fa6695c95c47724214417a9c036c965e4a
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 2f2242fdee12c60aab61890007978f8fac9ce63d
+PODFILE CHECKSUM: a63c84fe8915a0dcd895a8241dfe7121c707999b
 
 COCOAPODS: 1.8.4

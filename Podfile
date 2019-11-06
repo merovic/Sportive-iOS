@@ -15,6 +15,8 @@ pod 'Firebase/Storage'
 pod 'BEMCheckBox'
 pod 'NVActivityIndicatorView'
 pod 'SwiftyJSON'
+pod 'Cosmos'
+
 
 
   target 'SportiveTests' do

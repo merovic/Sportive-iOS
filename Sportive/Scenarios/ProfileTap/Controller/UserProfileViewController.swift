@@ -98,5 +98,9 @@ extension UserProfileViewController: UITableViewDataSource , UITableViewDelegate
         }
         return UITableViewCell()
     }
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = storyboard?.instantiateViewController(identifier: "DetailsView") as! DataOfCenterViewController
+        vc.user = centerArray![indexPath.row]
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }

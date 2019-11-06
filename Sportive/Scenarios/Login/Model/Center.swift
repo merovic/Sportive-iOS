@@ -13,10 +13,10 @@ struct Center: Codable {
     let lang, lat: String
     let images: String
     let famous: Famous
-    let datee, des, history: String
-    let img1, img2: String
-    let img3: Img3
-    let img4: Img4
+    let datee: String
+    let des: DES
+    let history: History
+    let img1, img2, img3, img4: String
     let linkedIn: String?
     let facebook: String?
     let services: String?
@@ -35,19 +35,21 @@ struct Center: Codable {
     }
 }
 
+enum DES: String, Codable {
+    case empty = ""
+    case mohamedAhemd = "Mohamed Ahemd"
+    case welcome = "Welcome "
+}
+
 enum Famous: String, Codable {
     case empty = ""
     case famous = "famous"
 }
 
-enum Img3: String, Codable {
+enum History: String, Codable {
+    case aLi = "ALi"
     case empty = ""
-    case img3 = "img_3"
-}
-
-enum Img4: String, Codable {
-    case empty = ""
-    case img4 = "img_4"
+    case welcome = "Welcome "
 }
 
 enum TypeEnum: String, Codable {

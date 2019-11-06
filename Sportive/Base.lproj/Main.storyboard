@@ -107,7 +107,7 @@
         <!--Data Of Center View Controller-->
         <scene sceneID="5RR-i7-72z">
             <objects>
-                <viewController id="3aB-3Z-xS2" customClass="DataOfCenterViewController" customModule="Sportive" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailsView" id="3aB-3Z-xS2" customClass="DataOfCenterViewController" customModule="Sportive" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gxs-Qi-3j4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1546"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1964,7 +1964,7 @@
                         <outlet property="tableView1" destination="kfC-iE-0tH" id="rjx-hs-3io"/>
                         <segue destination="jZb-hU-uaF" kind="show" identifier="GoUser" id="kBx-ch-Pfp"/>
                         <segue destination="xL5-sc-Vmx" kind="show" identifier="GoTrainer" id="W9D-Jp-uyc"/>
-                        <segue destination="3aB-3Z-xS2" kind="show" id="jDn-Db-KWt"/>
+                        <segue destination="3aB-3Z-xS2" kind="show" identifier="GoToDetails" id="jDn-Db-KWt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l7J-sf-YPU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

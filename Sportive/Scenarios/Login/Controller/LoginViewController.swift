@@ -130,8 +130,8 @@ class LoginViewController: UIViewController,NVActivityIndicatorViewable {
               vc.modalPresentationStyle = .fullScreen
               
           } else if segue.identifier == "GoToUer" {
-              let vc = segue.destination as! UserTabBar
-              vc.modalPresentationStyle = .fullScreen
+//              let vc = segue.destination as! UserTabBar
+//              vc.modalPresentationStyle = .fullScreen
               
           }
       }

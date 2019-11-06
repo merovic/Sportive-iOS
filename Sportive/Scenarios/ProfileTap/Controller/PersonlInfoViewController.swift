@@ -58,6 +58,8 @@ class PersonlInfoViewController: UIViewController , NVActivityIndicatorViewable 
             passwordTf.text = user.password
             mobileTf.text = user.phone
             emailTf.text = user.email
+            descriptionLbl.text = user.des
+            historyLbl.text = user.history
             profileImg.sd_setImage(with: URL(string: user.images), placeholderImage: UIImage(named: "user"))
             uploadedImages[0].sd_setImage(with: URL(string: user.img_1), placeholderImage: UIImage(named: "user"))
             uploadedImages[1].sd_setImage(with: URL(string: user.img_2), placeholderImage: UIImage(named: "user"))
@@ -97,7 +99,7 @@ class PersonlInfoViewController: UIViewController , NVActivityIndicatorViewable 
     
     @IBAction func saveBtnPressed(_ sender: UIButton) {
         if let user = Centers.center {
-            APIClient.updateCenter(desctiption: descriptionLbl.text ?? user.des , history: historyLbl.text ?? user.history, img_1: Centers.img1 ?? user.img_1, img_2: image2 ?? user.img_2, img_3: image3 ?? user.img_3, img_4: image4 ?? user.img_4, id: user.id) { (Result) in
+            APIClient.updateCenter(desctiption: descriptionLbl.text ?? user.des , history: historyLbl.text ?? user.history, img_1: Centers.img1 ?? user.img_1, img_2: Centers.img2 ?? user.img_2, img_3: Centers.img3 ?? user.img_3, img_4: Centers.img4 ?? user.img_4, id: user.id) { (Result) in
                 switch Result {
                 case .success( _):
                         DispatchQueue.main.async {
@@ -127,13 +129,29 @@ class PersonlInfoViewController: UIViewController , NVActivityIndicatorViewable 
     //MARK: - Upload the 4 Images for personal Section
     
     @IBAction func Upload4Images(_ sender: UIButton) {
-        imagePickedNumber = 2
-        imagePicker.sourceType = .photoLibrary
-        present(imagePicker, animated: true, completion: nil)
+        if sender.tag == 2 {
+                   imagePickedNumber = sender.tag
+                    imagePicker.sourceType = .photoLibrary
+                   present(imagePicker, animated: true, completion: nil)
+               } else if sender.tag == 3 {
+                   imagePickedNumber = sender.tag
+                               imagePicker.sourceType = .photoLibrary
+                              present(imagePicker, animated: true, completion: nil)
+               } else if sender.tag == 4 {
+                   imagePickedNumber = sender.tag
+                               imagePicker.sourceType = .photoLibrary
+                              present(imagePicker, animated: true, completion: nil)
+               } else if sender.tag == 5 {
+                   imagePickedNumber = sender.tag
+                               imagePicker.sourceType = .photoLibrary
+                              present(imagePicker, animated: true, completion: nil)
+               }
     }
     
     @IBAction func addGameBtnPressed(_ sender: UIButton) {
       }
+    
+    
 }
 
 //MARK: - ImagePicker Set Up and Image Upload
@@ -150,8 +168,16 @@ extension PersonlInfoViewController: UIImagePickerControllerDelegate {
         } else if imagePickedNumber == 2 {
             uploadedImages[0].image = image
             image1 = FirebaseUploader.uploadToFirebase(viewController: self, imagePicker: imagePicker, didFinishPickingMediaWithInfo: info, butNumber: imagePickedNumber)
+        }else if imagePickedNumber == 3 {
+            uploadedImages[1].image = image
+            image1 = FirebaseUploader.uploadToFirebase(viewController: self, imagePicker: imagePicker, didFinishPickingMediaWithInfo: info, butNumber: imagePickedNumber)
+        }else if imagePickedNumber == 4 {
+            uploadedImages[2].image = image
+            image1 = FirebaseUploader.uploadToFirebase(viewController: self, imagePicker: imagePicker, didFinishPickingMediaWithInfo: info, butNumber: imagePickedNumber)
+        }else if imagePickedNumber == 5 {
+            uploadedImages[3].image = image
+            image1 = FirebaseUploader.uploadToFirebase(viewController: self, imagePicker: imagePicker, didFinishPickingMediaWithInfo: info, butNumber: imagePickedNumber)
         }
-        
     }
     
 }

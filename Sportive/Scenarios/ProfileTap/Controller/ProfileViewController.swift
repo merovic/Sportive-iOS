@@ -32,12 +32,6 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        tableView.delegate = self
-        tableView.dataSource = self
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        print("----------------------")
         user = Centers.center
         updateViewFromData()
        getGames()
@@ -84,7 +78,6 @@ class ProfileViewController: UIViewController {
                 switch Result {
                 case .success(let response):
                   DispatchQueue.main.async {
-                       print(response)
                     self.games = response
                     self.tableView.reloadData()
                     
@@ -100,6 +93,11 @@ class ProfileViewController: UIViewController {
         }
         
     }
+    
+    @IBAction func logOut(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }
 
 

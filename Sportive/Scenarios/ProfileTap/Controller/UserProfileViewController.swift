@@ -77,7 +77,9 @@ class UserProfileViewController: UIViewController {
             performSegue(withIdentifier: "GoTrainer", sender: self)
         }
     }
-    
+    @IBAction func logOut(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }
 
 extension UserProfileViewController: UITableViewDataSource , UITableViewDelegate {

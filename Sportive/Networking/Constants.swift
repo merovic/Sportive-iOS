@@ -95,6 +95,9 @@ struct K {
         static let id = "id"
 
     }
+    struct select_comment_by_id {
+        static let id = "id"
+    }
     
 }
 

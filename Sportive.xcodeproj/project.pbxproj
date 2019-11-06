@@ -44,6 +44,7 @@
 		81387DBB23684EF900B172DB /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81387DB823684EF900B172DB /* APIClient.swift */; };
 		815358622366F1720095A98F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815358612366F1720095A98F /* SignUpViewController.swift */; };
 		81758CFC23685F0F004CD357 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81758CFB23685F0F004CD357 /* LoginResponse.swift */; };
+		817D618C23735CA000FB96E9 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817D618B23735CA000FB96E9 /* Comment.swift */; };
 		81921A8B236F244400BD1765 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81921A8A236F244400BD1765 /* Game.swift */; };
 		81921A8D236F244C00BD1765 /* CenterTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81921A8C236F244C00BD1765 /* CenterTabBar.swift */; };
 		81921A8F236F245400BD1765 /* UserTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81921A8E236F245400BD1765 /* UserTabBar.swift */; };
@@ -126,6 +127,7 @@
 		81387DB823684EF900B172DB /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		815358612366F1720095A98F /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		81758CFB23685F0F004CD357 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		817D618B23735CA000FB96E9 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		81921A8A236F244400BD1765 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		81921A8C236F244C00BD1765 /* CenterTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterTabBar.swift; sourceTree = "<group>"; };
 		81921A8E236F245400BD1765 /* UserTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTabBar.swift; sourceTree = "<group>"; };
@@ -383,6 +385,7 @@
 			isa = PBXGroup;
 			children = (
 				81921A8A236F244400BD1765 /* Game.swift */,
+				817D618B23735CA000FB96E9 /* Comment.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -706,6 +709,7 @@
 				3B3A52E423678EF20018FA82 /* GameTableViewCell.swift in Sources */,
 				3BA9118A2372F60400BBFEEE /* CommentTableViewCell.swift in Sources */,
 				18F0935F2341F338000B29CA /* SceneDelegate.swift in Sources */,
+				817D618C23735CA000FB96E9 /* Comment.swift in Sources */,
 				81921A9723706B7400BD1765 /* CentersTableViewCell.swift in Sources */,
 				3BFC2A672370651700387540 /* TrainerPersonalInfoViewController.swift in Sources */,
 				3BA911882372F24500BBFEEE /* CenteProfileGammingTableViewCell.swift in Sources */,

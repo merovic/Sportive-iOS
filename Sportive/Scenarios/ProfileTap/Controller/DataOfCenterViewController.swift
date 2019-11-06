@@ -9,6 +9,7 @@
 import UIKit
 import MapKit
 import SDWebImage
+
 class DataOfCenterViewController: UIViewController {
     
     @IBOutlet weak var profileImage: UIImageView!
@@ -24,6 +25,8 @@ class DataOfCenterViewController: UIViewController {
     @IBOutlet weak var historyLbl: UILabel!
     @IBOutlet weak var TableViewOfGamming: UITableView!
     @IBOutlet weak var TableViewOfComment: UITableView!
+    @IBOutlet weak var joinBtn: UIButton!
+    @IBOutlet weak var commentBtn: UIButton!
     
     
     var user: Center?
@@ -32,10 +35,13 @@ class DataOfCenterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateView()
+        getGame()
         
     }
 
     func updateView(){
+        ProfilePic.roundedButton1(button: joinBtn)
+        ProfilePic.roundedButton2(button: commentBtn)
         if let user = user {
             name.text = user.name
             emailLbl.text = user.email
@@ -47,7 +53,8 @@ class DataOfCenterViewController: UIViewController {
             profileImage.sd_setImage(with: URL(string: user.images), placeholderImage: UIImage(named: "center"))
             images = [user.img1,user.img2,user.img3,user.img4]
             getLocation()
-            getGames()
+             
+//            getComments()
         }
     }
     
@@ -67,18 +74,35 @@ class DataOfCenterViewController: UIViewController {
         
     }
     
-    func getGames(){
-        APIClient.getGames(id_center: user?.id ?? 0) { (Result) in
-            switch Result {
-            case .success(let response):
-                self.games = response
-            case .failure(let error):
-                print("error.localizedDescription ============= \(error.localizedDescription)")
+    func getGame(){
+        if let id = user?.id {
+            APIClient.getGames(id_center: id) { (Result) in
+                switch Result {
+                case .success(let response) :
+                    print("=====================",response)
+                case.failure(let error):
+                    print(error.localizedDescription)
+                }
             }
-            
         }
     }
     
+//    func getComments(){
+//        if let id = user?.id {
+//            APIClient.getComments(id: id) { (result) in
+//                switch result {
+//                case .success(let response):
+//                    DispatchQueue.main.async {
+//                        print("response================== \(response)")
+//                    }
+//                case .failure(let error) :
+//                    DispatchQueue.global().async {
+//                        print(error.localizedDescription)
+//                    }
+//                }
+//            }
+//        }
+//    }
     @IBAction func JoinAction(_ sender: Any) {
     }
     
@@ -103,7 +127,13 @@ extension DataOfCenterViewController: UICollectionViewDataSource , UICollectionV
 
 extension DataOfCenterViewController: UITableViewDataSource , UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return games?.count ?? 0
+        
+        if tableView.tag == 1 {
+            return games?.count ?? 0
+        } else if tableView.tag == 2 {
+            return 0
+        }
+        return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

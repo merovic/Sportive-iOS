@@ -36,16 +36,18 @@ class TrainerPersonalInfoViewController: UIViewController , UIImagePickerControl
 
     func updateView(){
         ProfilePic.roundedButton1(button: editBtn)
-
         ProfilePic.roundedButton1(button: saveBtn)
-
+        
         imagePicker.delegate = self
+        
         ProfilePic.roundedPic(imageView: profileImage)
         if let user = Centers.center {
             nameLbl.text = user.name
             passwordLbl.text = user.password
             mobileLbl.text = user.phone
             emailLbl.text = user.email
+            hisLbl.text = user.history
+            desLbl.text = user.des
             profileImage.sd_setImage(with: URL(string: user.images), placeholderImage: UIImage(named: "user"))
             imges[0].sd_setImage(with: URL(string: user.img_1), placeholderImage: UIImage(named: "user"))
             imges[1].sd_setImage(with: URL(string: user.img_2), placeholderImage: UIImage(named: "user"))
@@ -85,8 +87,23 @@ class TrainerPersonalInfoViewController: UIViewController , UIImagePickerControl
     }
     
     @IBAction func uploadImages(_ sender: UIButton) {
-        imagePickedNumber = sender.tag
-        
+        if sender.tag == 2 {
+            imagePickedNumber = sender.tag
+             imagePicker.sourceType = .photoLibrary
+            present(imagePicker, animated: true, completion: nil)
+        } else if sender.tag == 3 {
+            imagePickedNumber = sender.tag
+                        imagePicker.sourceType = .photoLibrary
+                       present(imagePicker, animated: true, completion: nil)
+        } else if sender.tag == 4 {
+            imagePickedNumber = sender.tag
+                        imagePicker.sourceType = .photoLibrary
+                       present(imagePicker, animated: true, completion: nil)
+        } else if sender.tag == 5 {
+            imagePickedNumber = sender.tag
+                        imagePicker.sourceType = .photoLibrary
+                       present(imagePicker, animated: true, completion: nil)
+        }
     }
     
     @IBAction func saveBtn(_ sender: UIButton) {
@@ -118,22 +135,22 @@ class TrainerPersonalInfoViewController: UIViewController , UIImagePickerControl
         }
         if imagePickedNumber == 2 {
             let image = info[.originalImage] as! UIImage
-            imges[imagePickedNumber].image = image
+            imges[0].image = image
             _ = FirebaseUploader.uploadToFirebase(viewController: self, imagePicker: imagePicker, didFinishPickingMediaWithInfo: info, butNumber: imagePickedNumber)
         }
         if imagePickedNumber == 3 {
             let image = info[.originalImage] as! UIImage
-            imges[imagePickedNumber].image = image
+            imges[1].image = image
             _ = FirebaseUploader.uploadToFirebase(viewController: self, imagePicker: imagePicker, didFinishPickingMediaWithInfo: info, butNumber: imagePickedNumber)
         }
         if imagePickedNumber == 4 {
             let image = info[.originalImage] as! UIImage
-            imges[imagePickedNumber].image = image
+            imges[2].image = image
             _ = FirebaseUploader.uploadToFirebase(viewController: self, imagePicker: imagePicker, didFinishPickingMediaWithInfo: info, butNumber: imagePickedNumber)
         }
         if imagePickedNumber == 5 {
             let image = info[.originalImage] as! UIImage
-            imges[imagePickedNumber].image = image
+            imges[3].image = image
             _ = FirebaseUploader.uploadToFirebase(viewController: self, imagePicker: imagePicker, didFinishPickingMediaWithInfo: info, butNumber: imagePickedNumber)
         }
     }

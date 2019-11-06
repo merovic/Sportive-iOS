@@ -62,10 +62,14 @@ class LoginViewController: UIViewController,NVActivityIndicatorViewable {
                                 let type : String = json[0]["type"].string!
                                 
                                if type == "user" ||  type == "trainer" {
-                                self.performSegue(withIdentifier: "GoToUer", sender: self)
+                                    self.performSegue(withIdentifier: "GoToUer", sender: self)
+                                    self.yourEmailTf.text = ""
+                                    self.passwordTF.text = ""
                                 } else if type == "center" {
                                     self.performSegue(withIdentifier: "goToHome", sender: self)
                                     self.stopAnimating()
+                                    self.yourEmailTf.text = ""
+                                    self.passwordTF.text = ""
                                 }
                             
                             } catch let parseError as NSError {
@@ -130,8 +134,8 @@ class LoginViewController: UIViewController,NVActivityIndicatorViewable {
               vc.modalPresentationStyle = .fullScreen
               
           } else if segue.identifier == "GoToUer" {
-//              let vc = segue.destination as! UserTabBar
-//              vc.modalPresentationStyle = .fullScreen
+              let vc = segue.destination as! UserTabBar
+              vc.modalPresentationStyle = .fullScreen
               
           }
       }

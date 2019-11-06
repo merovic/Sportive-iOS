@@ -9,10 +9,11 @@
 import UIKit
 
 class CenteProfileGammingTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var gameNameLbl: UILabel!
     
     @IBOutlet weak var trainerLbl: UILabel!
+    var delete = "delete this"
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

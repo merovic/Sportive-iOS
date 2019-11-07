@@ -106,7 +106,7 @@ class APIClient {
              }
     
    static func getComments(id : Int , completion:@escaping (Result<[CommentElement],AFError>)->Void) {
-   performRequest(route: APIRouter.Select_All_Activities(id: id), completion: completion)
+   performRequest(route: APIRouter.select_comment_by_id(id: id), completion: completion)
    }
     
     

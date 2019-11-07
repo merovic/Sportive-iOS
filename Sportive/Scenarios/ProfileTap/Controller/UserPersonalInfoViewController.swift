@@ -9,15 +9,15 @@
 import UIKit
 import NVActivityIndicatorView
 import FirebaseStorage
-class UserPersonalInfoViewController: UIViewController , NVActivityIndicatorViewable , UINavigationControllerDelegate , UIImagePickerControllerDelegate{
+class UserPersonalInfoViewController: UIViewController , NVActivityIndicatorViewable {
 
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var nameTf: UITextField!
     @IBOutlet weak var emailTf: UITextField!
     @IBOutlet weak var passwordTf: UITextField!
     @IBOutlet weak var MobileTf: UITextField!
-    
     @IBOutlet weak var editBtn: UIButton!
+    
     let imagePicker = UIImagePickerController()
     var imgNumber = 0
     override func viewDidLoad() {
@@ -50,17 +50,16 @@ class UserPersonalInfoViewController: UIViewController , NVActivityIndicatorView
     }
     
     @IBAction func editBtnPressed(_ sender: UIButton) {
-        
+        let user = Centers.center
         self.startAnimating()
-               
-               let user = Centers.center
+        
         if let name = nameTf.text , let password = passwordTf.text, let mobile = MobileTf.text {
                    
                    APIClient.editUserOrCenterData(name: name, password: password, phone: mobile, long: user!.lang, lat: user!.lat, images: Centers.image ?? user?.images ?? "", desctiption: user?.des ?? "", id: user!.id) { (Result) in
                        
                        switch Result {
-                       case .success( _):
-                               DispatchQueue.main.async {
+                            case .success( _):
+                                DispatchQueue.main.async {
                                    self.stopAnimating()
                                    Alert.show("Sucess", massege: "Changes Saved Successfuly", context: self)
                                }
@@ -73,10 +72,11 @@ class UserPersonalInfoViewController: UIViewController , NVActivityIndicatorView
                }
     }
     
+}
+
+extension UserPersonalInfoViewController: UINavigationControllerDelegate , UIImagePickerControllerDelegate {
     
-    
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+  func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         let image = info[.originalImage] as! UIImage
         profileImage.image = image

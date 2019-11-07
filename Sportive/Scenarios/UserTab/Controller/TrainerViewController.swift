@@ -9,54 +9,42 @@
 import UIKit
 
 class TrainerViewController: UIViewController {
+
+    @IBOutlet weak var allTrainerTableView: UITableView!
     
     var user: LoginResponses?
     var tariner:[Tariner]?
-
-    @IBOutlet weak var allTrainerTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        allTrainerTableView.delegate = self
-        allTrainerTableView.dataSource = self
-        user = Centers.center
-        print("xfcghjkm,l;fghjmk,l.")
-        
         getALLTariner()
-
-
-        // Do any additional setup after loading the view.
     }
 
-    
-    
-    
+    //MARK: - Get all trainers from API
     func  getALLTariner(){
-               
-               APIClient.getAllTariner { (res) in
-                   switch res {
-                   case .success(let response):
-                       DispatchQueue.main.async {
-                         //  print(response)
+        user = Centers.center
+            APIClient.getAllTariner { (res) in
+                switch res {
+                    case .success(let response):
+                        DispatchQueue.main.async {
                             self.tariner = response
-                           print(self.tariner)
-                        self.allTrainerTableView.reloadData()
-                       }
-                       case .failure(let error):
-                       DispatchQueue.main.async {
-                           print(error.localizedDescription)
-                       }
-                   }
-               }
+                            self.allTrainerTableView.reloadData()
+                            ProfilePic.emptyData(TabelView: self.allTrainerTableView, View: self.view, MessageText: "No Trainers")
 
+                        }
+                   case .failure(let error):
+                        DispatchQueue.main.async {
+                        print(error.localizedDescription)
+                        ProfilePic.emptyData(TabelView: self.allTrainerTableView, View: self.view, MessageText: "No Trainers")
+                        }
+                }
+            }
     }
     
-        
-        
-        
-        
-        
-    
-
+    //MARK: - Log Out
+    @IBAction func logOut(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
+    }
 
 }
 
@@ -74,6 +62,7 @@ extension TrainerViewController: UITableViewDelegate , UITableViewDataSource {
         cell.nameLbl.text = tariner?[indexPath.row].name
         cell.emailLbl.text = tariner?[indexPath.row].email
         cell.profileImage.sd_setImage(with: URL(string: tariner?[indexPath.row].images ?? ""), placeholderImage: UIImage(named: "user"))
+        
         return cell
     }
     

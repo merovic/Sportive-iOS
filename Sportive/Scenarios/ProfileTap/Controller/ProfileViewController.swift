@@ -16,6 +16,9 @@ class ProfileViewController: UIViewController {
     
     //MARK - IBOutlet
     
+    
+    @IBOutlet weak var gameTabelView: UITableView!
+    @IBOutlet weak var ScollView: UIScrollView!
     @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var Image: UIImageView!
     @IBOutlet weak var mapView: MKMapView!
@@ -34,9 +37,8 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         user = Centers.center
         updateViewFromData()
-       getGames()
+        
     }
-    
     
 //MARK:- Update View From Model
     
@@ -50,10 +52,12 @@ class ProfileViewController: UIViewController {
             Image.sd_setImage(with: URL(string: user.images), placeholderImage: UIImage(named: "center"))
             images = [user.img_1 ,user.img_2 ,user.img_3 ,user.img_4]
             
+            getGames()
             useLocationOnMap()
         }
         
     }
+    
     //MARK: - Add Mark To The Map
     func useLocationOnMap(){
         if let lat = user?.lat , let long = user?.lang {
@@ -77,13 +81,10 @@ class ProfileViewController: UIViewController {
             APIClient.getGames(id_center: Id) { (Result) in
                 switch Result {
                 case .success(let response):
-                  DispatchQueue.main.async {
-                    self.games = response
-                    self.tableView.reloadData()
-                    
+                    DispatchQueue.main.async {
+                        self.games = response
+                        self.tableView.reloadData()
                    }
-                    
-                    
                 case .failure(let error):
                     DispatchQueue.main.async {
                         print(error.localizedDescription)
@@ -116,7 +117,6 @@ extension ProfileViewController : UITableViewDataSource , UITableViewDelegate{
     //TODO: Declare cellForRowAtIndexPath here:
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "GameTableViewCell", for: indexPath) as! GameTableViewCell
             cell.gameNameLbl.text = games?[indexPath.row].nameGame
             cell.trainerLbl.text = games?[indexPath.row].coach
@@ -124,9 +124,6 @@ extension ProfileViewController : UITableViewDataSource , UITableViewDelegate{
             return cell
         }
     }
-    
-    
-
 
 
 
@@ -147,7 +144,6 @@ extension ProfileViewController : UICollectionViewDataSource,UICollectionViewDel
         
         return cell
     }
-    
     
 }
 

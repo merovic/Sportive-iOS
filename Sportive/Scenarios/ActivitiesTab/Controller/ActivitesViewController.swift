@@ -10,10 +10,12 @@ import UIKit
 
 class ActivitesViewController: UIViewController {
     
-    var user: LoginResponses?
-    var actives:[AllActive]?
+
 
     @IBOutlet weak var ActivitiesTableView: UITableView!
+    
+    var user: LoginResponses?
+    var actives:[AllActive]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,44 +24,40 @@ class ActivitesViewController: UIViewController {
         
         user = Centers.center
         allActive()
-        
 
-       
     }
     
-    
-    
+    //MARK: - Request activities from API
     func allActive()  {
         
-          if let id = user?.id{
+        if let id = user?.id{
             DispatchQueue.main.async {
                 APIClient.getAllActive(id: id, completion: { result in
-                           switch result{
-                               case .success(let response):
-                                       DispatchQueue.main.async {
-                                           print(response)
-                                        self.actives = response
-                                        self.ActivitiesTableView.reloadData()
-                                        
-                                       }
-                                   case .failure(let error):
-                                       print(error.localizedDescription)
+                    switch result{
+                        case .success(let response):
+                            DispatchQueue.main.async {
+                                print(response)
+                                    self.actives = response
+                                    self.ActivitiesTableView.reloadData()
+                                    ProfilePic.emptyData(TabelView: self.ActivitiesTableView, View: self.view, MessageText: "No Activities")
 
                                    }
-                                    })
-                                      
-                   
+                         case .failure(let error):
+                            print(error.localizedDescription)
+                                ProfilePic.emptyData(TabelView: self.ActivitiesTableView, View: self.view, MessageText: "No Activities")
+                    }
+                })
+            }
         }
     }
-        
+
+    //MARK: - Log Out
+    @IBAction func logOut(_ sender: UIBarButtonItem) {
+         self.dismiss(animated: true, completion: nil)
     }
-
     
-    
-
-    
-
 }
+
 
 // MARK: - TableView Set Up
 extension ActivitesViewController: UITableViewDataSource, UITableViewDelegate {
@@ -75,13 +73,8 @@ extension ActivitesViewController: UITableViewDataSource, UITableViewDelegate {
         cell.emailLbl.text = actives?[indexPath.row].email
         cell.ImageView.sd_setImage(with: URL(string: actives?[indexPath.row].images ?? ""), placeholderImage: UIImage(named: "user"))
         cell.rateButtonPressed.text = actives?[indexPath.row].type
-        
-        
-        
+  
         return cell
     }
-    
-    
-    
-    
+ 
 }

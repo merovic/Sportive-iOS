@@ -20,24 +20,21 @@ class UserProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView1.delegate = self
-        tableView1.dataSource = self
-        user = Centers.center
         getCenters()
     }
     
+    //MARK: - Request all centers from API
     func getCenters(){
+        user = Centers.center
         APIClient.getAllCenters { (result) in
             switch result {
                 case .success(let response):
                    DispatchQueue.main.async {
                     self.centerArray = response
-                    print(self.centerArray)
-//                    self.useLocationOnMap()
                     self.addLocations(locationArray: self.centerArray)
                     self.tableView1.reloadData()
                    }
-               case .failure(let error):
+                case .failure(let error):
                    DispatchQueue.main.async {
                        print(error.localizedDescription)
                    }
@@ -45,6 +42,7 @@ class UserProfileViewController: UIViewController {
         }
     }
     
+    //MARK: - Add locations
     func addLocations(locationArray:[Center]?) {
         
         if let locations = locationArray {
@@ -57,7 +55,7 @@ class UserProfileViewController: UIViewController {
         
     }
     
-    
+    //MARK: - Add Mark to the Map
     func addAnnotation(lat:Double , Long:Double){
         let location = CLLocationCoordinate2D(latitude: lat, longitude: Long )
 
@@ -68,20 +66,25 @@ class UserProfileViewController: UIViewController {
         mapView.setRegion(region, animated: true)
     }
 
+    //MARK: - Do Segue
     @IBAction func profileButtonPressed(_ sender: Any) {
         if Centers.center?.type == "user" {
-            
             performSegue(withIdentifier: "GoUser", sender: self)
             
         } else if Centers.center?.type == "trainer" {
             performSegue(withIdentifier: "GoTrainer", sender: self)
+            
         }
     }
+    
+    //MARK: - Log Out
     @IBAction func logOut(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
     }
 }
 
+
+//MARK: - TableView Set Up
 extension UserProfileViewController: UITableViewDataSource , UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return centerArray?.count ?? 0
@@ -91,6 +94,7 @@ extension UserProfileViewController: UITableViewDataSource , UITableViewDelegate
         
             
         if let center = centerArray?[indexPath.row] {
+            
             let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CentersTableViewCell
             cell.centerImage.sd_setImage(with: URL(string: center.images), placeholderImage: UIImage(named: "center"))
             cell.centerName.text = center.name
@@ -98,11 +102,14 @@ extension UserProfileViewController: UITableViewDataSource , UITableViewDelegate
             
             return cell
         }
+        
         return UITableViewCell()
     }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = storyboard?.instantiateViewController(identifier: "DetailsView") as! DataOfCenterViewController
         vc.user = centerArray![indexPath.row]
         navigationController?.pushViewController(vc, animated: true)
     }
+    
 }

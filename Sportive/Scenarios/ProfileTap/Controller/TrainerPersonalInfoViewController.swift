@@ -11,7 +11,7 @@ import NVActivityIndicatorView
 import SDWebImage
 import FirebaseStorage
 
-class TrainerPersonalInfoViewController: UIViewController , UIImagePickerControllerDelegate , UINavigationControllerDelegate , NVActivityIndicatorViewable {
+class TrainerPersonalInfoViewController: UIViewController , NVActivityIndicatorViewable {
 
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var nameLbl: UITextField!
@@ -22,18 +22,17 @@ class TrainerPersonalInfoViewController: UIViewController , UIImagePickerControl
     @IBOutlet weak var hisLbl: UITextView!
     @IBOutlet var imges: [UIImageView]!
     @IBOutlet weak var editBtn: UIButton!
-    
     @IBOutlet weak var saveBtn: UIButton!
+    
     let imagePicker = UIImagePickerController()
     var imagePickedNumber = 0
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         updateView()
     }
-
+    
+    //MARK: - Update View From Model
     func updateView(){
         ProfilePic.roundedButton1(button: editBtn)
         ProfilePic.roundedButton1(button: saveBtn)
@@ -59,24 +58,23 @@ class TrainerPersonalInfoViewController: UIViewController , UIImagePickerControl
     @IBAction func editBtnPressed(_ sender: UIButton) {
         self.startAnimating()
                
-               let user = Centers.center
-               if let name = nameLbl.text , let password = passwordLbl.text , let mobile = mobileLbl.text {
-                   
-                   APIClient.editUserOrCenterData(name: name, password: password, phone: mobile, long: user!.lang, lat: user!.lat, images: Centers.image ?? user?.images ?? "", desctiption: user?.des ?? "", id: user!.id) { (Result) in
-                       
-                       switch Result {
-                       case .success( _):
-                               DispatchQueue.main.async {
-                                   self.stopAnimating()
-                                   Alert.show("Sucess", massege: "Changes Saved Successfuly", context: self)
-                               }
-                           case .failure(let error):
-                               self.stopAnimating()
-                               print(error.localizedDescription)
-                               Alert.show("Failed", massege: "can not save changes", context: self)
-                           }
-                       }
+       let user = Centers.center
+       if let name = nameLbl.text , let password = passwordLbl.text , let mobile = mobileLbl.text {
+           APIClient.editUserOrCenterData(name: name, password: password, phone: mobile, long: user!.lang, lat: user!.lat, images: Centers.image ?? user?.images ?? "", desctiption: user?.des ?? "", id: user!.id) { (Result) in
+               
+               switch Result {
+               case .success( _):
+                   DispatchQueue.main.async {
+                       self.stopAnimating()
+                       Alert.show("Sucess", massege: "Changes Saved Successfuly", context: self)
+                   }
+               case .failure(let error):
+                   self.stopAnimating()
+                   print(error.localizedDescription)
+                   Alert.show("Failed", massege: "can not save changes", context: self)
                }
+           }
+       }
         
     }
     @IBAction func uploadProfileImage(_ sender: UIButton) {
@@ -110,23 +108,27 @@ class TrainerPersonalInfoViewController: UIViewController , UIImagePickerControl
         
         if let user = Centers.center {
             APIClient.updateCenter(desctiption: desLbl.text ?? user.des , history: hisLbl.text ?? user.history, img_1: Centers.img1 ?? user.img_1, img_2: Centers.img2 ?? user.img_2, img_3: Centers.img3 ?? user.img_3, img_4: Centers.img4 ?? user.img_4, id: user.id) { (Result) in
-                       switch Result {
-                       case .success( _):
-                               DispatchQueue.main.async {
-                                   self.stopAnimating()
-                                   Alert.show("Sucess", massege: "Changes Saved Successfuly", context: self)
-                               }
-                           case .failure(let error):
-                               self.stopAnimating()
-                               print(error.localizedDescription)
-                               Alert.show("Failed", massege: "can not save changes", context: self)
-                           }
-                       
-                   }
-               }
+                   switch Result {
+                   case .success( _):
+                       DispatchQueue.main.async {
+                           self.stopAnimating()
+                           Alert.show("Sucess", massege: "Changes Saved Successfuly", context: self)
+                       }
+                   case .failure(let error):
+                       self.stopAnimating()
+                       print(error.localizedDescription)
+                       Alert.show("Failed", massege: "can not save changes", context: self)
+                    }
+                }
+        }
     }
+}
+
+//MARK: - ImagePicker Set Up
+extension TrainerPersonalInfoViewController:  UIImagePickerControllerDelegate , UINavigationControllerDelegate {
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
         if imagePickedNumber == 1 {
             let image = info[.originalImage] as! UIImage
             profileImage.image = image
@@ -154,8 +156,6 @@ class TrainerPersonalInfoViewController: UIViewController , UIImagePickerControl
             _ = FirebaseUploader.uploadToFirebase(viewController: self, imagePicker: imagePicker, didFinishPickingMediaWithInfo: info, butNumber: imagePickedNumber)
         }
     }
-    
-    
     
     
 }

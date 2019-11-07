@@ -23,17 +23,15 @@ class PersonlInfoViewController: UIViewController , NVActivityIndicatorViewable 
     @IBOutlet weak var descriptionLbl: UITextView!
     @IBOutlet weak var historyLbl: UITextView!
     @IBOutlet var uploadedImages: [UIImageView]!
-    
     @IBOutlet weak var addBtn: UIButton!
     @IBOutlet weak var saveBtn: UIButton!
     @IBOutlet weak var editBtn: UIButton!
+    
     var profileImageUrl: String?
     let imagePicker = UIImagePickerController()
     var imagePickedNumber = 0
     var image1: String?
-    var image2: String?
-    var image3: String?
-    var image4: String?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

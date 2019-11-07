@@ -19,14 +19,15 @@ class LoginViewController: UIViewController,NVActivityIndicatorViewable {
     
     @IBOutlet weak var yourEmailTf: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
-    
     @IBOutlet weak var loginBtn: UIButton!
-    
     @IBOutlet weak var signBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         ProfilePic.roundedButton2(button: signBtn)
         ProfilePic.roundedButton2(button: loginBtn)
+        
     }
     
     //MARK - IBAction
@@ -35,58 +36,51 @@ class LoginViewController: UIViewController,NVActivityIndicatorViewable {
     }
     @IBAction func signUpButtonPressed(_ sender: UIButton) {
     }
-    @IBAction func forgetPasswordPressed(_ sender: UIButton) {
-    }
    
     
 //MARK: - forgetPassword And Get Data From API
-    
-    
-
+    @IBAction func forgetPasswordPressed(_ sender: UIButton) {
+    }
 //MARK: - Log In And Get Data From API
     func login (){
         self.startAnimating()
         DispatchQueue.main.async {
-            // Test Login request
             if let email = self.yourEmailTf.text,!email.isEmpty , let password = self.passwordTF.text,!password.isEmpty {
                 APIClient.loginUser(email: email, password: password , completion: { result in
                 switch result {
                     case .success(let response):
-
                         DispatchQueue.main.async {
-                            
                             do {
                                     let json = try JSON(data: Data(response.utf8))
-                                self.updateLoginData(json: json)
-                                print(json)
-                                let type : String = json[0]["type"].string!
-                                
-                               if type == "user" ||  type == "trainer" {
-                                    self.performSegue(withIdentifier: "GoToUer", sender: self)
-                                    self.yourEmailTf.text = ""
-                                    self.passwordTF.text = ""
-                                } else if type == "center" {
-                                    self.performSegue(withIdentifier: "goToHome", sender: self)
-                                    self.stopAnimating()
-                                    self.yourEmailTf.text = ""
-                                    self.passwordTF.text = ""
-                                }
+                                    self.updateLoginData(json: json)
+                                    print(json)
+                                    let type : String = json[0]["type"].string!
+                                    
+                                    if type == "user" ||  type == "trainer" {
+                                        self.performSegue(withIdentifier: "GoToUer", sender: self)
+                                        self.yourEmailTf.text = ""
+                                        self.passwordTF.text = ""
+                                    } else if type == "center" {
+                                        self.performSegue(withIdentifier: "goToHome", sender: self)
+                                        self.stopAnimating()
+                                        self.yourEmailTf.text = ""
+                                        self.passwordTF.text = ""
+                                    }
                             
                             } catch let parseError as NSError {
                                 print("JSON Error \(parseError.localizedDescription)")
                             }
-                            
                             self.stopAnimating()
                         }
                     case .failure(let error):
-                    print(error.localizedDescription)
+                        print(error.localizedDescription)
                     self.stopAnimating()
 
                     }
                 })
                 
 
-            }else{
+            } else {
                 self.stopAnimating()
             }
             
@@ -94,8 +88,7 @@ class LoginViewController: UIViewController,NVActivityIndicatorViewable {
     }
     
     //Write the updateLoginData method here:
-       func updateLoginData(json : JSON)  {
-           
+    func updateLoginData(json : JSON)  {
         if   json [0] ["type"].string != nil {
             
              loginResponses.id = json [0] ["id"].intValue
@@ -125,7 +118,7 @@ class LoginViewController: UIViewController,NVActivityIndicatorViewable {
            } else {
               
            }
-       }
+    }
     
    //MARK: - Prepare For Segue and Present it as fullscreen
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -139,6 +132,5 @@ class LoginViewController: UIViewController,NVActivityIndicatorViewable {
               
           }
       }
-    
 }
 

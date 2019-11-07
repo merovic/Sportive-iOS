@@ -9,42 +9,46 @@
 import UIKit
 
 class UserViewController: UIViewController {
-    
-    var user: LoginResponses?
-    var tariner:[Tariner]?
 
     @IBOutlet weak var UserTableView: UITableView!
     
+    var user: LoginResponses?
+    var tariner:[Tariner]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        UserTableView.delegate = self
-        UserTableView.dataSource = self
-        user = Centers.center
         getALLTariner()
     }
     
-    
+    //MARK: - Get all trainers from API
     func  getALLTariner(){
-           
-           APIClient.getAllTariner { (res) in
-               switch res {
+        user = Centers.center
+        
+        APIClient.getAllTariner { (res) in
+           switch res {
                case .success(let response):
                    DispatchQueue.main.async {
-                     //  print(response)
                         self.tariner = response
-                       print(self.tariner)
-                    self.UserTableView.reloadData()
+                        self.UserTableView.reloadData()
+                        ProfilePic.emptyData(TabelView: self.UserTableView, View: self.view, MessageText: "No Trainers")
+                    
                    }
-                   case .failure(let error):
+               case .failure(let error):
                    DispatchQueue.main.async {
-                       print(error.localizedDescription)
+                        print(error.localizedDescription)
+                        ProfilePic.emptyData(TabelView: self.UserTableView, View: self.view, MessageText: "No Trainers")
                    }
-               }
            }
+       }
 
+    }
+    //MARK: - Log Out
+    @IBAction func logOut(_ sender: UIBarButtonItem) {
+         self.dismiss(animated: true, completion: nil)
+    }
 }
-}
+
+
 //MARK: - TableView Set Up
 extension UserViewController: UITableViewDelegate , UITableViewDataSource {
     
@@ -54,10 +58,10 @@ extension UserViewController: UITableViewDelegate , UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! UserTableViewCell
+        
         cell.nameLbl.text = tariner?[indexPath.row].name
         cell.emailLbl.text = tariner?[indexPath.row].email
         cell.ImageView.sd_setImage(with: URL(string: tariner?[indexPath.row].images ?? ""), placeholderImage: UIImage(named: "user"))
-        
         
         return cell
     }

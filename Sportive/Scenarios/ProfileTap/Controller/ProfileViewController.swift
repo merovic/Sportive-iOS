@@ -141,8 +141,8 @@ extension ProfileViewController : UICollectionViewDataSource,UICollectionViewDel
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCollectionViewCell", for: indexPath) as! ImageCollectionViewCell
-//        cell.imageView.layer.masksToBounds = true
-//        cell.imageView.contentMode = .scaleAspectFit
+        cell.imageView.layer.masksToBounds = true
+        cell.imageView.contentMode = .scaleAspectFit
         cell.imageView.sd_setImage(with: URL(string: images![indexPath.row]), placeholderImage: UIImage(named: "user"))
         
         return cell

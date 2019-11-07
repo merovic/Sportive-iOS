@@ -37,7 +37,7 @@ struct Center: Codable {
 
 enum DES: String, Codable {
     case empty = ""
-    case hisotry = "Hisotry"
+    case pofilito = "Pofilito"
     case welcome = "Welcome "
 }
 
@@ -48,10 +48,11 @@ enum Famous: String, Codable {
 
 enum History: String, Codable {
     case empty = ""
-    case newProfile = "New profile\t"
+    case me = "Me\t"
     case welcome = "Welcome "
 }
 
 enum TypeEnum: String, Codable {
     case center = "center"
 }
+

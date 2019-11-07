@@ -35,8 +35,7 @@ class DataOfCenterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateView()
-        getGame()
-        
+        getGames()
     }
 
     func updateView(){
@@ -74,17 +73,25 @@ class DataOfCenterViewController: UIViewController {
         
     }
     
-    func getGame(){
-        if let id = user?.id {
-            APIClient.getGames(id_center: id) { (Result) in
+    func getGames(){
+        if let Id = user?.id{
+            APIClient.getGames(id_center: Id) { (Result) in
                 switch Result {
-                case .success(let response) :
-                    print("=====================",response)
-                case.failure(let error):
-                    print(error.localizedDescription)
+                case .success(let response):
+                  DispatchQueue.main.async {
+                    print(response)
+                    print(Id)
+                    }
+                    
+                    
+                case .failure(let error):
+                    DispatchQueue.main.async {
+                        print(error.localizedDescription)
+                    }
                 }
             }
         }
+        
     }
     
 //    func getComments(){

@@ -537,6 +537,10 @@
                                                                 </connections>
                                                             </tableViewCell>
                                                         </prototypes>
+                                                        <connections>
+                                                            <outlet property="dataSource" destination="3aB-3Z-xS2" id="wGh-T8-dO3"/>
+                                                            <outlet property="delegate" destination="3aB-3Z-xS2" id="hmw-NM-fLB"/>
+                                                        </connections>
                                                     </tableView>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -1980,6 +1984,10 @@
                                                                 </connections>
                                                             </tableViewCell>
                                                         </prototypes>
+                                                        <connections>
+                                                            <outlet property="dataSource" destination="DHA-dz-5ti" id="Xly-aj-SbV"/>
+                                                            <outlet property="delegate" destination="DHA-dz-5ti" id="bys-Yi-v7r"/>
+                                                        </connections>
                                                     </tableView>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

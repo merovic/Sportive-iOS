@@ -84,7 +84,7 @@ class DataOfCenterViewController: UIViewController {
                switch result {
                case .success(let response):
                    DispatchQueue.main.async {
-                    ProfilePic.emptyData(TabelView: self.gameTableView, View: self.viewGame, MessageText: "No Games")
+//                    ProfilePic.emptyData(TabelView: self.gameTableView, View: self.viewGame, MessageText: "No Games")
                        do {
                             let jsonArray = try JSON(data: Data(response.utf8))
                         

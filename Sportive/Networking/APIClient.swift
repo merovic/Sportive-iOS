@@ -91,6 +91,10 @@ class APIClient {
 
        }
     
+    static func games(id_center: Int, completion:@escaping (Result<String,AFError>)->Void){
+        performRequestSimple(route: APIRouter.select_game(id_center: id_center), completion: completion)
+    }
+    
     
     static func getAllActive(id : Int , completion:@escaping (Result<[AllActive],AFError>)->Void) {
        performRequest(route: APIRouter.Select_All_Activities(id: id), completion: completion)

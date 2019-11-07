@@ -40,6 +40,7 @@
 		3BFC2A652370650600387540 /* UserPersonalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFC2A642370650600387540 /* UserPersonalInfoViewController.swift */; };
 		3BFC2A672370651700387540 /* TrainerPersonalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFC2A662370651700387540 /* TrainerPersonalInfoViewController.swift */; };
 		617423247F0A48871FFD6A5E /* Pods_SportiveTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CC4C1500AF3225748954746 /* Pods_SportiveTests.framework */; };
+		8136C389237478D90097D00A /* CommentPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8136C388237478D90097D00A /* CommentPopUp.swift */; };
 		81387DB923684EF900B172DB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81387DB623684EF800B172DB /* Constants.swift */; };
 		81387DBA23684EF900B172DB /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81387DB723684EF800B172DB /* APIRouter.swift */; };
 		81387DBB23684EF900B172DB /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81387DB823684EF900B172DB /* APIClient.swift */; };
@@ -124,6 +125,7 @@
 		3E9139F31647B44501EC6E49 /* Pods-Sportive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sportive.release.xcconfig"; path = "Target Support Files/Pods-Sportive/Pods-Sportive.release.xcconfig"; sourceTree = "<group>"; };
 		5FDF0EA66DFDA3679EF3841D /* Pods-SportiveUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportiveUITests.release.xcconfig"; path = "Target Support Files/Pods-SportiveUITests/Pods-SportiveUITests.release.xcconfig"; sourceTree = "<group>"; };
 		66150556E812A96C8D3169C9 /* Pods-SportiveTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportiveTests.debug.xcconfig"; path = "Target Support Files/Pods-SportiveTests/Pods-SportiveTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8136C388237478D90097D00A /* CommentPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentPopUp.swift; sourceTree = "<group>"; };
 		81387DB623684EF800B172DB /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		81387DB723684EF800B172DB /* APIRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 		81387DB823684EF900B172DB /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 				181B5F302366E48A002E7246 /* Utitlites */,
 				181B5F312366E499002E7246 /* Scenarios */,
 				18F0935E2341F338000B29CA /* SceneDelegate.swift */,
+				8136C388237478D90097D00A /* CommentPopUp.swift */,
 				18F0935C2341F338000B29CA /* AppDelegate.swift */,
 				81921A90236F246800BD1765 /* Centers.swift */,
 				81921A8C236F244C00BD1765 /* CenterTabBar.swift */,
@@ -685,6 +688,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81921A91236F246800BD1765 /* Centers.swift in Sources */,
+				8136C389237478D90097D00A /* CommentPopUp.swift in Sources */,
 				815358622366F1720095A98F /* SignUpViewController.swift in Sources */,
 				3BFC2A652370650600387540 /* UserPersonalInfoViewController.swift in Sources */,
 				3B18AEAE2370363500879104 /* TrainerViewController.swift in Sources */,

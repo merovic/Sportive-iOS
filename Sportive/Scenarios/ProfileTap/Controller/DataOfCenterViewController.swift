@@ -42,9 +42,8 @@ class DataOfCenterViewController: UIViewController {
         updateView()
         getComments()
         
-        
     }
-
+    
     func updateView(){
         ProfilePic.roundedButton1(button: joinBtn)
         ProfilePic.roundedButton2(button: commentBtn)
@@ -89,7 +88,6 @@ class DataOfCenterViewController: UIViewController {
                switch result {
                case .success(let response):
                    DispatchQueue.main.async {
-//                    ProfilePic.emptyData(TabelView: self.gameTableView, View: self.viewGame, MessageText: "No Games")
                        do {
                             let jsonArray = try JSON(data: Data(response.utf8))
                         
@@ -104,8 +102,10 @@ class DataOfCenterViewController: UIViewController {
                             
                             self.games.append(gam)
                             self.TableViewOfGamming.reloadData()
+                            
                         }
                        
+                         ProfilePic.emptyData(TabelView: self.gameTableView, View: self.viewGame, MessageText: "No Games")
                        } catch let parseError as NSError {
                            print("JSON Error \(parseError.localizedDescription)")
                        }
@@ -118,31 +118,31 @@ class DataOfCenterViewController: UIViewController {
            
        }
     }
+    
+    
     func getComments(){
         if let id = user?.id {
             APIClient.getComments(id: id) { (result) in
                 switch result {
                 case .success(let response):
-                    DispatchQueue.main.async {
-                        print("response================== \(response)")
-                        self.comment = response
-                        self.TableViewOfComment.reloadData()
-                    }
+                    self.comment = response
+                    self.TableViewOfComment.reloadData()
+                    ProfilePic.emptyData(TabelView: self.commentTabelView, View: self.viewComment, MessageText: "No Comments")
                 case .failure(let error) :
-                    DispatchQueue.global().async {
                         print(error.localizedDescription)
-                    }
+                         ProfilePic.emptyData(TabelView: self.commentTabelView, View: self.viewComment, MessageText: "No Comments")
                 }
             }
         }
     }
-
- 
     
     @IBAction func JoinAction(_ sender: Any) {
     }
     
     @IBAction func addComment(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(identifier: "Comment") as! CommentPopUp
+        vc.centerOrTrainerId = user!.id
+        present(vc, animated: true, completion: nil)
     }
     
 }
@@ -191,9 +191,8 @@ extension DataOfCenterViewController: UITableViewDataSource , UITableViewDelegat
                 cell.textViewComment.text = comments.comment
                 let rateStar = Double(comments.rate)
                 cell.rateStar.rating = rateStar ?? 0.0
-
                 
-                           return cell
+                return cell
             }
             
         

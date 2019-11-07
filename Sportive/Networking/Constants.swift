@@ -31,6 +31,13 @@ struct K {
         static let coach = "coach"
         
     }
+    struct AddComment {
+        static let id_user = "id_user"
+        static let id_center_or_teriner = "id_center_or_teriner"
+        static let Comment = "Comment"
+        static let Rate = "Rate"
+        
+    }
     struct Join {
         static let id_center = "id_center"
         static let game_name = "game_name"

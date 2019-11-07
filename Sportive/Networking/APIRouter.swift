@@ -28,7 +28,7 @@ enum APIRouter: URLRequestConvertible {
     case Update_user_or_center ( name : String  ,password:String,phone : String  ,long : String ,lat : String ,images : String , desctiption : String , id : Int )
     case select_all_trainer
     case select_comment_by_id ( id : Int)
-
+    case insert_sportive_comment (id_user: Int , id_center_or_trainer: Int , comment: String , rate: String)
 
     
     
@@ -72,6 +72,8 @@ enum APIRouter: URLRequestConvertible {
             return .get
         case .select_comment_by_id:
             return .get
+        case .insert_sportive_comment:
+            return .get
         }
     }
 
@@ -113,6 +115,8 @@ enum APIRouter: URLRequestConvertible {
             return "/select_all_trainer"
         case .select_comment_by_id:
             return "/select_comment_by_id"
+        case .insert_sportive_comment:
+            return "/insert_sportive_comment"
         }
     }
     
@@ -153,7 +157,9 @@ enum APIRouter: URLRequestConvertible {
         case .select_all_trainer:
             return nil
         case .select_comment_by_id(let id):
-            return [K.select_comment_by_id.id : id]
+            return [K.select_comment_by_id.id : id]           
+        case .insert_sportive_comment(let id_user, let id_center_or_trainer, let comment, let rate):
+            return [K.AddComment.id_user: id_user , K.AddComment.id_center_or_teriner: id_center_or_trainer ,K.AddComment.Comment: comment , K.AddComment.Rate: rate]
         }
 }
     

@@ -109,6 +109,10 @@ class APIClient {
    performRequest(route: APIRouter.select_comment_by_id(id: id), completion: completion)
    }
     
+    static func addComment( id_user: Int,id_center_or_trainer: Int ,comment: String, rate: String , completion:@escaping (Result<String,AFError>)->Void) {
+        performRequestSimple(route: APIRouter.insert_sportive_comment(id_user: id_user, id_center_or_trainer: id_center_or_trainer, comment: comment, rate: rate), completion: completion)
+
+    }
     
     
     

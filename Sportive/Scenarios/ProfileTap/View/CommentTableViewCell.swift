@@ -12,13 +12,24 @@ import Cosmos
 class CommentTableViewCell: UITableViewCell {
 
   
+    @IBOutlet weak var rateView: UIView!{
+        didSet{
+            self.rateView.layer.cornerRadius = self.rateView.frame.height / 2
+        }
+    }
     @IBOutlet weak var rateDegreeLbl: UILabel!
-    
     @IBOutlet weak var rateStar: CosmosView!
-    
-    @IBOutlet weak var textViewComment: UITextView!
+    @IBOutlet weak var textViewComment: UITextView!{
+        didSet{
+            self.textViewComment.layer.cornerRadius = 20    
+        }
+    }
     @IBOutlet weak var nameLbl: UILabel!
-    @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var profileImage: UIImageView! {
+        didSet{
+            ProfilePic.roundedPic(imageView: self.profileImage)
+        }
+    }
     
     override func awakeFromNib() {
           super.awakeFromNib()

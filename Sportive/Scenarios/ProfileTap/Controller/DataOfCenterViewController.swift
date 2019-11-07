@@ -36,9 +36,13 @@ class DataOfCenterViewController: UIViewController {
     var user: Center?
     var images: [String]?
     var games = [Gam]()
+    var comment:[CommentElement]?
     override func viewDidLoad() {
         super.viewDidLoad()
         updateView()
+        getComments()
+        
+        
     }
 
     func updateView(){
@@ -78,7 +82,8 @@ class DataOfCenterViewController: UIViewController {
     
     
     func getAllGame() {
-           APIClient.games(id_center: 158, completion: {
+        if let user = user?.id {
+        APIClient.games(id_center: user, completion: {
             
                result in
                switch result {
@@ -112,22 +117,27 @@ class DataOfCenterViewController: UIViewController {
            })
            
        }
-//    func getComments(){
-//        if let id = user?.id {
-//            APIClient.getComments(id: id) { (result) in
-//                switch result {
-//                case .success(let response):
-//                    DispatchQueue.main.async {
-//                        print("response================== \(response)")
-//                    }
-//                case .failure(let error) :
-//                    DispatchQueue.global().async {
-//                        print(error.localizedDescription)
-//                    }
-//                }
-//            }
-//        }
-//    }
+    }
+    func getComments(){
+        if let id = user?.id {
+            APIClient.getComments(id: id) { (result) in
+                switch result {
+                case .success(let response):
+                    DispatchQueue.main.async {
+                        print("response================== \(response)")
+                        self.comment = response
+                        self.TableViewOfComment.reloadData()
+                    }
+                case .failure(let error) :
+                    DispatchQueue.global().async {
+                        print(error.localizedDescription)
+                    }
+                }
+            }
+        }
+    }
+
+ 
     
     @IBAction func JoinAction(_ sender: Any) {
     }
@@ -159,7 +169,8 @@ extension DataOfCenterViewController: UITableViewDataSource , UITableViewDelegat
         if tableView.tag == 1 {
             return games.count
         } else if tableView.tag == 2 {
-            return 0
+            return comment?.count ?? 0
+            
         }
         return 0
     }
@@ -172,7 +183,20 @@ extension DataOfCenterViewController: UITableViewDataSource , UITableViewDelegat
                       cell.trainerLbl.text = games[indexPath.row].coach
             return cell
         } else if tableView.tag == 2 {
+            if let comments = comment?[indexPath.row] {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "CommentTableViewCell", for: indexPath) as! CommentTableViewCell
+                cell.rateDegreeLbl.text = "\(comments.rate)/5"
+                cell.nameLbl.text = comments.name
+                cell.profileImage.sd_setImage(with: URL(string: comments.images), placeholderImage: UIImage(named: "user"))
+                cell.textViewComment.text = comments.comment
+                let rateStar = Double(comments.rate)
+                cell.rateStar.rating = rateStar ?? 0.0
+
+                
+                           return cell
+            }
             
+        
         }
         
      return UITableViewCell()

@@ -612,9 +612,11 @@
                         <outlet property="TableViewOfComment" destination="jsl-u7-h74" id="1kD-q2-LiR"/>
                         <outlet property="TableViewOfGamming" destination="Qqx-F0-99e" id="rwt-FJ-V1o"/>
                         <outlet property="commentBtn" destination="do3-ve-3wI" id="gg0-aY-E4l"/>
+                        <outlet property="commentTabelView" destination="jsl-u7-h74" id="Izj-Hh-8qu"/>
                         <outlet property="coolectionView" destination="5E5-gh-Ylk" id="AsS-XJ-WHe"/>
                         <outlet property="descirptionLbl" destination="GLX-R2-SZd" id="UdA-Rm-uaZ"/>
                         <outlet property="emailLbl" destination="dpN-35-jlS" id="W6V-HM-WuR"/>
+                        <outlet property="gameTableView" destination="Qqx-F0-99e" id="249-jI-SLs"/>
                         <outlet property="historyLbl" destination="idK-Xf-gTb" id="ERS-b5-t6w"/>
                         <outlet property="joinBtn" destination="gEm-QN-Wwn" id="d5z-X1-N2S"/>
                         <outlet property="linkidInLbl" destination="BjM-km-jpn" id="9y7-i8-ypq"/>
@@ -622,6 +624,8 @@
                         <outlet property="name" destination="t85-nK-jtE" id="aFh-MR-Jzt"/>
                         <outlet property="profileImage" destination="ZIn-5f-iCu" id="XpA-Fp-6IJ"/>
                         <outlet property="serviceLbl" destination="Okb-81-0Ja" id="6fw-Db-BaY"/>
+                        <outlet property="viewComment" destination="qCz-5B-q4S" id="QzA-yb-81s"/>
+                        <outlet property="viewGame" destination="4ko-cb-Y2f" id="7Is-Rr-aS8"/>
                         <outlet property="webSiteLbl" destination="vnG-mi-sm0" id="Md1-ho-q0Q"/>
                     </connections>
                 </viewController>

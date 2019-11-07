@@ -9,16 +9,13 @@ import Foundation
 struct Tariner: Codable {
     let id: Int
     let name, email, password, phone: String
-    let type: NewTypeEnum
+    let type: newTypeEnum
     let lang, lat: String
     let images: String
-    let famous: NewFamous
-    let datee, des: String
-    let history: NewHistory
-    let img1: String
-    let img2: NewImg2
-    let img3: NewImg3
-    let img4: NewImg4
+    let famous: newFamous
+    let datee, des, history: String
+    let img1, img2, img3: String
+    let img4: Img4
     let linkedIn: String?
     let facebook: String?
     let services: String?
@@ -37,38 +34,21 @@ struct Tariner: Codable {
     }
 }
 
-enum NewFamous: String, Codable {
+enum newFamous: String, Codable {
     case empty = ""
     case fam = "fam"
     case famous = "famous"
 }
 
-enum NewHistory: String, Codable {
-    case empty = ""
-    case his = "his"
-    case swimming = "Swimming "
-}
-
-enum NewImg2: String, Codable {
-    case empty = ""
-    case img = "img"
-    case img2 = "img_2"
-}
-
-enum NewImg3: String, Codable {
-    case empty = ""
-    case img = "img"
-    case img3 = "img_3"
-}
-
-enum NewImg4: String, Codable {
+enum Img4: String, Codable {
     case empty = ""
     case img = "img"
     case img4 = "img_4"
 }
 
-enum NewTypeEnum: String, Codable {
+enum newTypeEnum: String, Codable {
     case trainer = "trainer"
 }
 
 typealias Tariners = [Tariner]
+

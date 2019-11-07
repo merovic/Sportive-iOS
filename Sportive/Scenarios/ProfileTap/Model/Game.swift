@@ -19,5 +19,4 @@ struct Game: Codable {
     }
 }
 
-//typealias Games = [Game]
-
+typealias Games = [Game]

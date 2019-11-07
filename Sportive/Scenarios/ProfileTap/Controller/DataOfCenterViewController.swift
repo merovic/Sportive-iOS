@@ -9,6 +9,7 @@
 import UIKit
 import MapKit
 import SDWebImage
+import SwiftyJSON
 
 class DataOfCenterViewController: UIViewController {
     
@@ -28,14 +29,14 @@ class DataOfCenterViewController: UIViewController {
     @IBOutlet weak var joinBtn: UIButton!
     @IBOutlet weak var commentBtn: UIButton!
     
-    
+    var num = 0
     var user: Center?
     var images: [String]?
-    var games: [Game]?
+    var games = [Gam]()
     override func viewDidLoad() {
         super.viewDidLoad()
         updateView()
-        getGames()
+        getAllGame()
     }
 
     func updateView(){
@@ -73,26 +74,56 @@ class DataOfCenterViewController: UIViewController {
         
     }
     
-    func getGames(){
-        if let Id = user?.id{
-            APIClient.getGames(id_center: Id) { (Result) in
-                switch Result {
-                case .success(let response):
-                  DispatchQueue.main.async {
-                    print(response)
-                    print(Id)
-                    }
-                    
-                    
-                case .failure(let error):
-                    DispatchQueue.main.async {
-                        print(error.localizedDescription)
-                    }
-                }
-            }
-        }
-        
-    }
+    
+    func getAllGame() {
+           APIClient.games(id_center: 158, completion: {
+            
+               result in
+               switch result {
+               case .success(let response):
+                   DispatchQueue.main.async {
+                       do {
+                      let jsonArray = try JSON(data: Data(response.utf8))
+                        //self.games
+                          // self.updateLoginData(json: json)
+                        for json in 0..<jsonArray.count {
+                            self.num = json
+                            let gam = Gam()
+                            gam.id = jsonArray[json]["id"].intValue
+                            gam.idCenter = jsonArray[json]["id_center"].intValue
+                            gam.nameGame = jsonArray[json]["name_game"].stringValue
+                           gam.coach = jsonArray[json]["coach"].stringValue
+                            gam.datee = jsonArray[json]["Datee"].stringValue
+                            print(gam.nameGame)
+                            self.games.append(gam)
+                            self.TableViewOfGamming.reloadData()
+                            print(self.games)
+                        }
+                       
+                       } catch let parseError as NSError {
+                           print("JSON Error \(parseError.localizedDescription)")
+                       }
+                   }
+               case .failure(let error):
+               print(error.localizedDescription)
+               }
+           })
+           
+       }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
 //    func getComments(){
 //        if let id = user?.id {
@@ -136,7 +167,7 @@ extension DataOfCenterViewController: UITableViewDataSource , UITableViewDelegat
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if tableView.tag == 1 {
-            return games?.count ?? 0
+            return games.count ?? 0
         } else if tableView.tag == 2 {
             return 0
         }
@@ -144,12 +175,12 @@ extension DataOfCenterViewController: UITableViewDataSource , UITableViewDelegat
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let game = games {
+        
             let cell = tableView.dequeueReusableCell(withIdentifier: "CenteProfileGammingTableViewCell", for: indexPath) as! CenteProfileGammingTableViewCell
-            cell.gameNameLbl.text = game[indexPath.row].nameGame
-            cell.trainerLbl.text = game[indexPath.row].coach
-        }
-     return UITableViewCell()
+            cell.gameNameLbl.text = games[indexPath.row].nameGame
+            cell.trainerLbl.text = games[indexPath.row].coach
+        
+     return cell
     }
     
     

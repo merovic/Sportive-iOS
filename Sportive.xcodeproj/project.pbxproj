@@ -19,6 +19,7 @@
 		18F0937F2341F33A000B29CA /* SportiveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F0937E2341F33A000B29CA /* SportiveUITests.swift */; };
 		3B10AEB9236ADDA000F389A1 /* MapKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B10AEB8236ADDA000F389A1 /* MapKitViewController.swift */; };
 		3B138174236F33A9005AADE7 /* AllActive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B138173236F33A9005AADE7 /* AllActive.swift */; };
+		3B16B90723742DD60007570B /* Games.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16B90623742DD60007570B /* Games.swift */; };
 		3B18AE842370258E00879104 /* ActivitesUserOrTrainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B18AE832370258E00879104 /* ActivitesUserOrTrainerViewController.swift */; };
 		3B18AE862370262A00879104 /* ActivitiesUserOrTrainerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B18AE852370262A00879104 /* ActivitiesUserOrTrainerTableViewCell.swift */; };
 		3B18AE8A23702CEB00879104 /* TrainerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B18AE8923702CEB00879104 /* TrainerTableViewCell.swift */; };
@@ -99,6 +100,7 @@
 		3619FBD4E9D4F8AD1DFA6834 /* Pods_Sportive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sportive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B10AEB8236ADDA000F389A1 /* MapKitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapKitViewController.swift; sourceTree = "<group>"; };
 		3B138173236F33A9005AADE7 /* AllActive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllActive.swift; sourceTree = "<group>"; };
+		3B16B90623742DD60007570B /* Games.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Games.swift; sourceTree = "<group>"; };
 		3B18AE832370258E00879104 /* ActivitesUserOrTrainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitesUserOrTrainerViewController.swift; sourceTree = "<group>"; };
 		3B18AE852370262A00879104 /* ActivitiesUserOrTrainerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesUserOrTrainerTableViewCell.swift; sourceTree = "<group>"; };
 		3B18AE8923702CEB00879104 /* TrainerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerTableViewCell.swift; sourceTree = "<group>"; };
@@ -386,6 +388,7 @@
 			children = (
 				81921A8A236F244400BD1765 /* Game.swift */,
 				817D618B23735CA000FB96E9 /* Comment.swift */,
+				3B16B90623742DD60007570B /* Games.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -696,6 +699,7 @@
 				81758CFC23685F0F004CD357 /* LoginResponse.swift in Sources */,
 				3B10AEB9236ADDA000F389A1 /* MapKitViewController.swift in Sources */,
 				81387DBA23684EF900B172DB /* APIRouter.swift in Sources */,
+				3B16B90723742DD60007570B /* Games.swift in Sources */,
 				81921A8F236F245400BD1765 /* UserTabBar.swift in Sources */,
 				3BCE98002367413D00777B8E /* LoginViewController.swift in Sources */,
 				81CD3CAE23670DDA00B4E8D5 /* UserViewController.swift in Sources */,

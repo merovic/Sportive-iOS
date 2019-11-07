@@ -46,6 +46,15 @@ class TrainerViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
 
+    @IBAction func showProfile(_ sender: UIBarButtonItem) {
+        
+        if user?.type == "user" {
+            performSegue(withIdentifier: "user", sender: self)
+        } else if user?.type == "trainer" {
+            performSegue(withIdentifier: "trainer", sender: self)
+        }
+    }
+    
 }
 
 

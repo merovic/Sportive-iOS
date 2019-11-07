@@ -12,6 +12,7 @@ import UIKit
 class Alert {
 
     static func show(_ title:String, massege:String , context:UIViewController) {
+       
       let alert = UIAlertController(title: title, message: massege, preferredStyle: .alert)
       // alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: nil))
       alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))

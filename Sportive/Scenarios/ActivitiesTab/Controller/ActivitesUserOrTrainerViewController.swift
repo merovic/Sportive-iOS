@@ -49,9 +49,15 @@ class ActivitesUserOrTrainerViewController: UIViewController {
     @IBAction func logOut(_ sender: UIBarButtonItem) {
          self.dismiss(animated: true, completion: nil)
     }
-    
+    @IBAction func showProfile(_ sender: UIBarButtonItem) {
+        if user?.type == "user" {
+            performSegue(withIdentifier: "user", sender: self)
+        } else if user?.type == "trainer" {
+            performSegue(withIdentifier: "trainer", sender: self)
+            
+        }
+    }
 }
-
 
 //MARK: - TabelView Set up
 extension ActivitesUserOrTrainerViewController : UITableViewDataSource, UITableViewDelegate {

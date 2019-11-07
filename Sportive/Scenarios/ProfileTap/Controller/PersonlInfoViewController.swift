@@ -147,6 +147,10 @@ class PersonlInfoViewController: UIViewController , NVActivityIndicatorViewable 
     }
     
     @IBAction func addGameBtnPressed(_ sender: UIButton) {
+        let vc = storyboard?.instantiateViewController(identifier: "GammingAddedViewController") as! GammingAddedViewController
+        
+        navigationController?.pushViewController(vc, animated: true)
+        
       }
     
     

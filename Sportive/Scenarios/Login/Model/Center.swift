@@ -43,6 +43,7 @@ enum DES: String, Codable {
 
 enum Famous: String, Codable {
     case empty = ""
+    case f = "f"
     case famous = "famous"
 }
 
@@ -55,4 +56,3 @@ enum History: String, Codable {
 enum TypeEnum: String, Codable {
     case center = "center"
 }
-

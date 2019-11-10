@@ -11,7 +11,7 @@ import NVActivityIndicatorView
 import SDWebImage
 import FirebaseStorage
 
-class PersonlInfoViewController: UIViewController , NVActivityIndicatorViewable , UINavigationControllerDelegate{
+class PersonlInfoViewController: UIViewController , NVActivityIndicatorViewable {
     
     //MARK - IBOutlet
 
@@ -158,7 +158,7 @@ class PersonlInfoViewController: UIViewController , NVActivityIndicatorViewable 
 
 //MARK: - ImagePicker Set Up and Image Upload
 
-extension PersonlInfoViewController: UIImagePickerControllerDelegate {
+extension PersonlInfoViewController: UIImagePickerControllerDelegate ,UINavigationControllerDelegate{
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let image = info[.originalImage] as! UIImage

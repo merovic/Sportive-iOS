@@ -12,11 +12,29 @@ class GammingAddedViewController: UIViewController {
     
     var user: LoginResponses?
 
+    @IBOutlet weak var addButton: UIButton!{
+        didSet{
+            ProfilePic.roundedButton2(button: self.addButton)
+        }
+    }
     @IBOutlet weak var nameOfTrainer: UITextField!
     @IBOutlet weak var nameOfGame: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
          user = Centers.center
+        addNavigationItem()
+        
+    }
+    
+    func addNavigationItem(){
+        let button1 = UIBarButtonItem(image: UIImage(named: "GoBack"), style: .plain, target: self, action: #selector(goBack))
+        button1.tintColor = .white
+        self.navigationItem.leftBarButtonItem  = button1
+        self.navigationItem.title = "Add Game"
+    }
+    @objc func goBack(){
+        self.navigationController?.popViewController(animated: true)
+        
     }
     
     @IBAction func addBtnPressed(_ sender: UIButton) {
@@ -34,9 +52,9 @@ class GammingAddedViewController: UIViewController {
                                     print(response)
                                     self.navigationController?.popViewController(animated: true)
                                 }
-                        case.failure(let error):
-                            print(error.localizedDescription)
-                            Alert.show("Problem", massege: error.localizedDescription  , context: self)
+                            case.failure(let error):
+                                print(error.localizedDescription)
+                                Alert.show("Problem", massege: error.localizedDescription  , context: self)
                         }
                     })
             } else {
